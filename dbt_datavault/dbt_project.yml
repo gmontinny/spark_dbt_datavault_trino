@@ -1,0 +1,25 @@
+name: "dbt_datavault"
+version: "1.0.0"
+config-version: 2
+
+profile: "dbt_datavault"
+
+model-paths: ["models"]
+macro-paths: ["macros"]
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+
+models:
+  dbt_datavault:
+    staging:
+      +materialized: view
+    raw_vault:
+      hubs:
+        +materialized: incremental
+        +incremental_strategy: append
+      satellites:
+        +materialized: incremental
+        +incremental_strategy: append
+      links:
+        +materialized: incremental
+        +incremental_strategy: append

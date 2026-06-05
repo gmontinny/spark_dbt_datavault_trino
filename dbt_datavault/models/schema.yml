@@ -1,0 +1,60 @@
+version: 2
+
+models:
+  - name: stg_customers
+    description: "Staging layer - prepares hash keys and business keys from raw customer data"
+
+  - name: hub_customer
+    description: "Hub containing unique customers identified by customer_id"
+    columns:
+      - name: hk_customer
+        description: "Hash key of customer_id"
+        tests:
+          - unique
+          - not_null
+
+  - name: hub_country
+    description: "Hub containing unique countries"
+    columns:
+      - name: hk_country
+        tests:
+          - unique
+          - not_null
+
+  - name: hub_category
+    description: "Hub containing unique product categories"
+    columns:
+      - name: hk_category
+        tests:
+          - unique
+          - not_null
+
+  - name: sat_customer_details
+    description: "Satellite tracking demographic changes for each customer"
+    columns:
+      - name: hk_customer
+        tests:
+          - not_null
+
+  - name: sat_customer_metrics
+    description: "Satellite tracking transactional metric changes for each customer"
+    columns:
+      - name: hk_customer
+        tests:
+          - not_null
+
+  - name: link_customer_country
+    description: "Link between customer and their country of residence"
+    columns:
+      - name: hk_customer_country
+        tests:
+          - unique
+          - not_null
+
+  - name: link_customer_category
+    description: "Link between customer and their preferred product category"
+    columns:
+      - name: hk_customer_category
+        tests:
+          - unique
+          - not_null

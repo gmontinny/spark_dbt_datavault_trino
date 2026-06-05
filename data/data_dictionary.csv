@@ -1,0 +1,26 @@
+column,dtype,description
+customer_id,string,Unique customer identifier (CUST-00001 … CUST-01200)
+age,integer,Customer age in years (18–75)
+gender,string,Self-reported gender identity
+country,string,Country of residence (15 countries across 4 regions)
+region,string,Broader geographic region derived from country
+income_bracket,string,Self-reported annual household income range (USD)
+signup_date,date,Date the customer created their account (YYYY-MM-DD)
+last_purchase_date,date,Date of the customer's most recent purchase (YYYY-MM-DD)
+customer_lifetime_days,integer,Days between signup_date and last_purchase_date
+days_since_last_purchase,integer,Days between last_purchase_date and 2024-12-31 (snapshot date)
+total_orders,integer,Cumulative number of orders placed
+total_spent_usd,float,Total lifetime spend in US dollars
+avg_order_value_usd,float,Average value per order in US dollars
+preferred_category,string,Product category with the most purchases
+preferred_payment_method,string,Most frequently used payment method
+device_type,string,"Primary device used to browse/purchase (Mobile, Desktop, Tablet)"
+loyalty_tier,string,"Tier based on total_spent: Bronze<$400, Silver<$1800, Gold<$5000, Platinum≥$5000"
+discount_usage_rate,float,Proportion of orders where a discount code was applied (0–1)
+return_rate,float,Proportion of orders that contained at least one returned item (0–1)
+newsletter_subscribed,boolean,Whether the customer opted into marketing emails
+referral_source,string,Channel through which the customer first arrived (acquisition source)
+avg_session_duration_min,float,Average browsing session length in minutes
+avg_pages_per_session,float,Average number of pages viewed per session
+satisfaction_score,integer,Post-purchase satisfaction rating: 1 (very dissatisfied) – 5 (very satisfied)
+churn,integer,"Binary target: 1 = churned (inactive >365 days, or >180 days + satisfaction ≤2), 0 = active"

@@ -1,0 +1,2315 @@
+[0m13:02:29.405421 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7a58aa5ca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7a5aa542f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7a57d4e2d0>]}
+
+
+============================== 13:02:29.439994 | 51f5f3ca-e5bc-4638-ae5e-0994abcb7a20 ==============================
+[0m13:02:29.439994 [info ] [MainThread]: Running with dbt=1.11.11
+[0m13:02:29.440533 [debug] [MainThread]: running dbt with arguments {'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'profiles_dir': '.', 'log_cache_events': 'False', 'introspect': 'True', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'empty': 'False', 'warn_error': 'None', 'use_experimental_parser': 'False', 'version_check': 'True', 'log_path': '/workspace/dbt_datavault/logs', 'invocation_command': 'dbt run --profiles-dir .', 'log_format': 'default', 'printer_width': '80', 'static_parser': 'True', 'no_print': 'None', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'partial_parse': 'True', 'target_path': 'None', 'quiet': 'False', 'debug': 'False'}
+[0m13:02:29.639208 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '51f5f3ca-e5bc-4638-ae5e-0994abcb7a20', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7a5893c590>]}
+[0m13:02:29.702737 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '51f5f3ca-e5bc-4638-ae5e-0994abcb7a20', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7a57805e80>]}
+[0m13:02:29.703444 [info ] [MainThread]: Registered adapter: trino=1.10.2
+[0m13:02:29.766792 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m13:02:29.768950 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m13:02:29.769344 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '51f5f3ca-e5bc-4638-ae5e-0994abcb7a20', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7a58332930>]}
+[0m13:02:31.023157 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '51f5f3ca-e5bc-4638-ae5e-0994abcb7a20', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7a5aa56960>]}
+[0m13:02:31.098259 [debug] [MainThread]: Wrote artifact WritableManifest to /workspace/dbt_datavault/target/manifest.json
+[0m13:02:31.101909 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspace/dbt_datavault/target/semantic_manifest.json
+[0m13:02:31.130859 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '51f5f3ca-e5bc-4638-ae5e-0994abcb7a20', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f79ffc2e060>]}
+[0m13:02:31.131282 [info ] [MainThread]: Found 8 models, 12 data tests, 495 macros
+[0m13:02:31.131627 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '51f5f3ca-e5bc-4638-ae5e-0994abcb7a20', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7a575add00>]}
+[0m13:02:31.133267 [info ] [MainThread]: 
+[0m13:02:31.133690 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m13:02:31.134056 [info ] [MainThread]: 
+[0m13:02:31.134563 [debug] [MainThread]: Acquiring new trino connection 'master'
+[0m13:02:31.138213 [debug] [ThreadPool]: Acquiring new trino connection 'list_hive'
+[0m13:02:31.143863 [debug] [ThreadPool]: Acquiring new trino connection 'list_hive'
+[0m13:02:31.196360 [debug] [ThreadPool]: Using trino connection "list_hive"
+[0m13:02:31.196958 [debug] [ThreadPool]: Using trino connection "list_hive"
+[0m13:02:31.197230 [debug] [ThreadPool]: On list_hive: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "connection_name": "list_hive"} */
+
+    select schema_name
+    from "hive".INFORMATION_SCHEMA.schemata
+[0m13:02:31.197879 [debug] [ThreadPool]: On list_hive: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "connection_name": "list_hive"} */
+
+    select schema_name
+    from "hive".INFORMATION_SCHEMA.schemata
+[0m13:02:31.198269 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:02:31.198608 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:02:31.198933 [warn ] [ThreadPool]: [[33mWARNING[0m]: SSL certificate validation is disabled by default. It is legacy behavior which will be changed in future releases. It is strongly advised to enable `require_certificate_validation` flag or explicitly set `cert` configuration to `True` for security reasons. You may receive an error after that if your SSL setup is incorrect.
+You may opt into the new behavior sooner by setting `flags.require_certificate_validation` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m13:02:31.199323 [warn ] [ThreadPool]: [[33mWARNING[0m]: SSL certificate validation is disabled by default. It is legacy behavior which will be changed in future releases. It is strongly advised to enable `require_certificate_validation` flag or explicitly set `cert` configuration to `True` for security reasons. You may receive an error after that if your SSL setup is incorrect.
+You may opt into the new behavior sooner by setting `flags.require_certificate_validation` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m13:02:31.199788 [debug] [ThreadPool]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': '51f5f3ca-e5bc-4638-ae5e-0994abcb7a20', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7a5750c5c0>]}
+[0m13:02:31.200253 [debug] [ThreadPool]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': '51f5f3ca-e5bc-4638-ae5e-0994abcb7a20', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f79ffc41040>]}
+[0m13:02:31.789975 [debug] [ThreadPool]: SQL status: SUCCESS in 0.592 seconds
+[0m13:02:31.791483 [debug] [ThreadPool]: On list_hive: Close
+[0m13:02:31.791977 [debug] [ThreadPool]: SQL status: SUCCESS in 0.593 seconds
+[0m13:02:31.793409 [debug] [ThreadPool]: On list_hive: Close
+[0m13:02:31.794141 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_hive, now create_hive_raw_vault_staging)
+[0m13:02:31.794437 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_hive, now create_hive_raw_vault_raw_vault)
+[0m13:02:31.794784 [debug] [ThreadPool]: Creating schema "database: "hive"
+schema: "raw_vault_staging"
+"
+[0m13:02:31.795225 [debug] [ThreadPool]: Creating schema "database: "hive"
+schema: "raw_vault_raw_vault"
+"
+[0m13:02:31.799150 [debug] [ThreadPool]: Using trino connection "create_hive_raw_vault_staging"
+[0m13:02:31.800992 [debug] [ThreadPool]: Using trino connection "create_hive_raw_vault_raw_vault"
+[0m13:02:31.801396 [debug] [ThreadPool]: On create_hive_raw_vault_staging: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "connection_name": "create_hive_raw_vault_staging"} */
+create schema if not exists "hive"."raw_vault_staging"
+[0m13:02:31.801760 [debug] [ThreadPool]: On create_hive_raw_vault_raw_vault: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "connection_name": "create_hive_raw_vault_raw_vault"} */
+create schema if not exists "hive"."raw_vault_raw_vault"
+[0m13:02:31.802100 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:02:31.802438 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:02:31.887357 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.085 seconds
+[0m13:02:31.887878 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.086 seconds
+[0m13:02:31.888654 [debug] [ThreadPool]: On create_hive_raw_vault_raw_vault: COMMIT
+[0m13:02:31.889447 [debug] [ThreadPool]: On create_hive_raw_vault_staging: COMMIT
+[0m13:02:31.889842 [debug] [ThreadPool]: On create_hive_raw_vault_raw_vault: Close
+[0m13:02:31.890196 [debug] [ThreadPool]: On create_hive_raw_vault_staging: Close
+[0m13:02:31.892243 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_hive_raw_vault_staging, now list_hive_raw_vault_staging)
+[0m13:02:31.892733 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_hive_raw_vault_raw_vault, now list_hive_raw_vault_raw_vault)
+[0m13:02:31.904699 [debug] [ThreadPool]: Using trino connection "list_hive_raw_vault_staging"
+[0m13:02:31.908087 [debug] [ThreadPool]: Using trino connection "list_hive_raw_vault_raw_vault"
+[0m13:02:31.908465 [debug] [ThreadPool]: On list_hive_raw_vault_staging: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "connection_name": "list_hive_raw_vault_staging"} */
+select
+      t.table_catalog as database,
+      t.table_name as name,
+      t.table_schema as schema,
+      case when mv.name is not null then 'materialized_view'
+           when t.table_type = 'BASE TABLE' then 'table'
+           when t.table_type = 'VIEW' then 'view'
+           else t.table_type
+      end as table_type
+    from "hive".INFORMATION_SCHEMA.tables t
+    left join (
+            select * from system.metadata.materialized_views
+            where catalog_name = 'hive'
+              and schema_name = 'raw_vault_staging') mv
+          on mv.catalog_name = t.table_catalog and mv.schema_name = t.table_schema and mv.name = t.table_name
+    where t.table_schema = 'raw_vault_staging'
+[0m13:02:31.908870 [debug] [ThreadPool]: On list_hive_raw_vault_raw_vault: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "connection_name": "list_hive_raw_vault_raw_vault"} */
+select
+      t.table_catalog as database,
+      t.table_name as name,
+      t.table_schema as schema,
+      case when mv.name is not null then 'materialized_view'
+           when t.table_type = 'BASE TABLE' then 'table'
+           when t.table_type = 'VIEW' then 'view'
+           else t.table_type
+      end as table_type
+    from "hive".INFORMATION_SCHEMA.tables t
+    left join (
+            select * from system.metadata.materialized_views
+            where catalog_name = 'hive'
+              and schema_name = 'raw_vault_raw_vault') mv
+          on mv.catalog_name = t.table_catalog and mv.schema_name = t.table_schema and mv.name = t.table_name
+    where t.table_schema = 'raw_vault_raw_vault'
+[0m13:02:31.909294 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:02:31.909640 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:02:32.252069 [debug] [ThreadPool]: SQL status: SUCCESS in 0.343 seconds
+[0m13:02:32.253536 [debug] [ThreadPool]: On list_hive_raw_vault_staging: ROLLBACK
+[0m13:02:32.254005 [debug] [ThreadPool]: SQL status: SUCCESS in 0.344 seconds
+[0m13:02:32.254302 [debug] [ThreadPool]: On list_hive_raw_vault_staging: Close
+[0m13:02:32.255422 [debug] [ThreadPool]: On list_hive_raw_vault_raw_vault: ROLLBACK
+[0m13:02:32.256110 [debug] [ThreadPool]: On list_hive_raw_vault_raw_vault: Close
+[0m13:02:32.256873 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '51f5f3ca-e5bc-4638-ae5e-0994abcb7a20', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f79ffda24e0>]}
+[0m13:02:32.257414 [debug] [MainThread]: On master: COMMIT
+[0m13:02:32.262980 [debug] [Thread-1 (]: Began running node model.dbt_datavault.stg_customers
+[0m13:02:32.263637 [info ] [Thread-1 (]: 1 of 8 START sql view model raw_vault_staging.stg_customers .................... [RUN]
+[0m13:02:32.264143 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_hive_raw_vault_raw_vault, now model.dbt_datavault.stg_customers)
+[0m13:02:32.264548 [debug] [Thread-1 (]: Began compiling node model.dbt_datavault.stg_customers
+[0m13:02:32.268073 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_datavault.stg_customers"
+[0m13:02:32.280127 [debug] [Thread-1 (]: Began executing node model.dbt_datavault.stg_customers
+[0m13:02:32.296406 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_datavault.stg_customers"
+[0m13:02:32.314237 [debug] [Thread-1 (]: Using trino connection "model.dbt_datavault.stg_customers"
+[0m13:02:32.314687 [debug] [Thread-1 (]: On model.dbt_datavault.stg_customers: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.stg_customers"} */
+
+  create or replace view
+    "hive"."raw_vault_staging"."stg_customers"
+  security definer
+  as
+    
+
+with source as (
+    select * from hive.raw_vault.raw_customers
+),
+
+staged as (
+    select
+        -- Business Keys
+        customer_id,
+        country,
+        preferred_category,
+
+        -- Hash Keys (Data Vault pattern)
+        cast(to_hex(sha256(cast(customer_id as varbinary))) as varchar) as hk_customer,
+        cast(to_hex(sha256(cast(country as varbinary))) as varchar) as hk_country,
+        cast(to_hex(sha256(cast(preferred_category as varbinary))) as varchar) as hk_category,
+        cast(to_hex(sha256(cast(concat(customer_id, '||', country) as varbinary))) as varchar) as hk_customer_country,
+        cast(to_hex(sha256(cast(concat(customer_id, '||', preferred_category) as varbinary))) as varchar) as hk_customer_category,
+
+        -- Hash Diff (detectar mudanças nos satellites)
+        cast(to_hex(sha256(cast(concat(
+            coalesce(cast(age as varchar), ''),
+            coalesce(gender, ''),
+            coalesce(income_bracket, ''),
+            coalesce(loyalty_tier, ''),
+            coalesce(device_type, ''),
+            coalesce(preferred_payment_method, '')
+        ) as varbinary))) as varchar) as hd_customer_details,
+
+        cast(to_hex(sha256(cast(concat(
+            coalesce(cast(total_orders as varchar), ''),
+            coalesce(cast(total_spent_usd as varchar), ''),
+            coalesce(cast(avg_order_value_usd as varchar), ''),
+            coalesce(cast(discount_usage_rate as varchar), ''),
+            coalesce(cast(return_rate as varchar), ''),
+            coalesce(cast(satisfaction_score as varchar), '')
+        ) as varbinary))) as varchar) as hd_customer_metrics,
+
+        -- Attributes
+        age,
+        gender,
+        region,
+        income_bracket,
+        signup_date,
+        last_purchase_date,
+        customer_lifetime_days,
+        days_since_last_purchase,
+        total_orders,
+        total_spent_usd,
+        avg_order_value_usd,
+        preferred_payment_method,
+        device_type,
+        loyalty_tier,
+        discount_usage_rate,
+        return_rate,
+        newsletter_subscribed,
+        referral_source,
+        avg_session_duration_min,
+        avg_pages_per_session,
+        satisfaction_score,
+        churn,
+
+        -- Metadata
+        load_datetime,
+        record_source
+    from source
+)
+
+select * from staged
+  
+[0m13:02:32.315080 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:02:32.586731 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.272 seconds
+[0m13:02:32.601673 [debug] [Thread-1 (]: On model.dbt_datavault.stg_customers: ROLLBACK
+[0m13:02:32.602123 [debug] [Thread-1 (]: On model.dbt_datavault.stg_customers: Close
+[0m13:02:32.603893 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '51f5f3ca-e5bc-4638-ae5e-0994abcb7a20', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7a5784f860>]}
+[0m13:02:32.604478 [info ] [Thread-1 (]: 1 of 8 OK created sql view model raw_vault_staging.stg_customers ............... [[32mCREATE VIEW[0m in 0.34s]
+[0m13:02:32.605416 [debug] [Thread-1 (]: Finished running node model.dbt_datavault.stg_customers
+[0m13:02:32.606638 [debug] [Thread-3 (]: Began running node model.dbt_datavault.hub_category
+[0m13:02:32.606998 [debug] [Thread-4 (]: Began running node model.dbt_datavault.hub_country
+[0m13:02:32.607294 [debug] [Thread-2 (]: Began running node model.dbt_datavault.hub_customer
+[0m13:02:32.607941 [debug] [Thread-1 (]: Began running node model.dbt_datavault.link_customer_category
+[0m13:02:32.607685 [info ] [Thread-3 (]: 2 of 8 START sql incremental model raw_vault_raw_vault.hub_category ............ [RUN]
+[0m13:02:32.608494 [info ] [Thread-4 (]: 3 of 8 START sql incremental model raw_vault_raw_vault.hub_country ............. [RUN]
+[0m13:02:32.609018 [info ] [Thread-2 (]: 4 of 8 START sql incremental model raw_vault_raw_vault.hub_customer ............ [RUN]
+[0m13:02:32.609518 [info ] [Thread-1 (]: 5 of 8 START sql incremental model raw_vault_raw_vault.link_customer_category .. [RUN]
+[0m13:02:32.610092 [debug] [Thread-3 (]: Acquiring new trino connection 'model.dbt_datavault.hub_category'
+[0m13:02:32.610554 [debug] [Thread-4 (]: Acquiring new trino connection 'model.dbt_datavault.hub_country'
+[0m13:02:32.611059 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_hive_raw_vault_staging, now model.dbt_datavault.hub_customer)
+[0m13:02:32.611523 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_datavault.stg_customers, now model.dbt_datavault.link_customer_category)
+[0m13:02:32.611923 [debug] [Thread-3 (]: Began compiling node model.dbt_datavault.hub_category
+[0m13:02:32.612305 [debug] [Thread-4 (]: Began compiling node model.dbt_datavault.hub_country
+[0m13:02:32.612723 [debug] [Thread-2 (]: Began compiling node model.dbt_datavault.hub_customer
+[0m13:02:32.613166 [debug] [Thread-1 (]: Began compiling node model.dbt_datavault.link_customer_category
+[0m13:02:32.616525 [debug] [Thread-3 (]: Writing injected SQL for node "model.dbt_datavault.hub_category"
+[0m13:02:32.619406 [debug] [Thread-4 (]: Writing injected SQL for node "model.dbt_datavault.hub_country"
+[0m13:02:32.622149 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_datavault.hub_customer"
+[0m13:02:32.624912 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_datavault.link_customer_category"
+[0m13:02:32.632898 [debug] [Thread-3 (]: Began executing node model.dbt_datavault.hub_category
+[0m13:02:32.633230 [debug] [Thread-1 (]: Began executing node model.dbt_datavault.link_customer_category
+[0m13:02:32.682692 [debug] [Thread-2 (]: Began executing node model.dbt_datavault.hub_customer
+[0m13:02:32.714530 [debug] [Thread-3 (]: Writing runtime sql for node "model.dbt_datavault.hub_category"
+[0m13:02:32.714925 [debug] [Thread-4 (]: Began executing node model.dbt_datavault.hub_country
+[0m13:02:32.721893 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_datavault.link_customer_category"
+[0m13:02:32.727358 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_datavault.hub_customer"
+[0m13:02:32.731272 [debug] [Thread-4 (]: Writing runtime sql for node "model.dbt_datavault.hub_country"
+[0m13:02:32.739245 [debug] [Thread-1 (]: Using trino connection "model.dbt_datavault.link_customer_category"
+[0m13:02:32.740629 [debug] [Thread-3 (]: Using trino connection "model.dbt_datavault.hub_category"
+[0m13:02:32.740905 [debug] [Thread-1 (]: On model.dbt_datavault.link_customer_category: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.link_customer_category"} */
+
+  
+    
+
+    create table "hive"."raw_vault_raw_vault"."link_customer_category"
+      
+      
+    as (
+      
+
+with staged as (
+    select distinct
+        hk_customer_category,
+        hk_customer,
+        hk_category,
+        load_datetime,
+        record_source
+    from "hive"."raw_vault_staging"."stg_customers"
+)
+
+select * from staged
+
+
+    )
+[0m13:02:32.741506 [debug] [Thread-3 (]: On model.dbt_datavault.hub_category: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.hub_category"} */
+
+  
+    
+
+    create table "hive"."raw_vault_raw_vault"."hub_category"
+      
+      
+    as (
+      
+
+with staged as (
+    select distinct
+        hk_category,
+        preferred_category,
+        load_datetime,
+        record_source
+    from "hive"."raw_vault_staging"."stg_customers"
+)
+
+select
+    hk_category,
+    preferred_category,
+    load_datetime,
+    record_source
+from staged
+
+
+    )
+[0m13:02:32.742010 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:02:32.743451 [debug] [Thread-4 (]: Using trino connection "model.dbt_datavault.hub_country"
+[0m13:02:32.743750 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m13:02:32.745395 [debug] [Thread-2 (]: Using trino connection "model.dbt_datavault.hub_customer"
+[0m13:02:32.746171 [debug] [Thread-4 (]: On model.dbt_datavault.hub_country: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.hub_country"} */
+
+  
+    
+
+    create table "hive"."raw_vault_raw_vault"."hub_country"
+      
+      
+    as (
+      
+
+with staged as (
+    select distinct
+        hk_country,
+        country,
+        load_datetime,
+        record_source
+    from "hive"."raw_vault_staging"."stg_customers"
+)
+
+select
+    hk_country,
+    country,
+    load_datetime,
+    record_source
+from staged
+
+
+    )
+[0m13:02:32.747590 [debug] [Thread-2 (]: On model.dbt_datavault.hub_customer: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.hub_customer"} */
+
+  
+    
+
+    create table "hive"."raw_vault_raw_vault"."hub_customer"
+      
+      
+    as (
+      
+
+with staged as (
+    select distinct
+        hk_customer,
+        customer_id,
+        load_datetime,
+        record_source
+    from "hive"."raw_vault_staging"."stg_customers"
+)
+
+select
+    hk_customer,
+    customer_id,
+    load_datetime,
+    record_source
+from staged
+
+
+    )
+[0m13:02:32.748099 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m13:02:32.748630 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m13:02:34.082648 [debug] [Thread-2 (]: SQL status: CREATE TABLE (1_200 rows) in 1.334 seconds
+[0m13:02:34.089051 [debug] [Thread-2 (]: Applying DROP to: "hive"."raw_vault_raw_vault"."hub_customer__dbt_tmp"
+[0m13:02:34.091837 [debug] [Thread-2 (]: Using trino connection "model.dbt_datavault.hub_customer"
+[0m13:02:34.092904 [debug] [Thread-3 (]: SQL status: CREATE TABLE (10 rows) in 1.349 seconds
+[0m13:02:34.093300 [debug] [Thread-2 (]: On model.dbt_datavault.hub_customer: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.hub_customer"} */
+
+    drop view if exists "hive"."raw_vault_raw_vault"."hub_customer__dbt_tmp"
+[0m13:02:34.096565 [debug] [Thread-3 (]: Applying DROP to: "hive"."raw_vault_raw_vault"."hub_category__dbt_tmp"
+[0m13:02:34.097295 [debug] [Thread-4 (]: SQL status: CREATE TABLE (15 rows) in 1.349 seconds
+[0m13:02:34.097670 [debug] [Thread-1 (]: SQL status: CREATE TABLE (1_200 rows) in 1.356 seconds
+[0m13:02:34.099115 [debug] [Thread-3 (]: Using trino connection "model.dbt_datavault.hub_category"
+[0m13:02:34.102485 [debug] [Thread-4 (]: Applying DROP to: "hive"."raw_vault_raw_vault"."hub_country__dbt_tmp"
+[0m13:02:34.105295 [debug] [Thread-1 (]: Applying DROP to: "hive"."raw_vault_raw_vault"."link_customer_category__dbt_tmp"
+[0m13:02:34.106276 [debug] [Thread-3 (]: On model.dbt_datavault.hub_category: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.hub_category"} */
+
+    drop view if exists "hive"."raw_vault_raw_vault"."hub_category__dbt_tmp"
+[0m13:02:34.107028 [debug] [Thread-4 (]: Using trino connection "model.dbt_datavault.hub_country"
+[0m13:02:34.107734 [debug] [Thread-1 (]: Using trino connection "model.dbt_datavault.link_customer_category"
+[0m13:02:34.109174 [debug] [Thread-4 (]: On model.dbt_datavault.hub_country: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.hub_country"} */
+
+    drop view if exists "hive"."raw_vault_raw_vault"."hub_country__dbt_tmp"
+[0m13:02:34.110302 [debug] [Thread-1 (]: On model.dbt_datavault.link_customer_category: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.link_customer_category"} */
+
+    drop view if exists "hive"."raw_vault_raw_vault"."link_customer_category__dbt_tmp"
+[0m13:02:34.116916 [debug] [Thread-2 (]: SQL status: DROP VIEW in 0.019 seconds
+[0m13:02:34.119335 [debug] [Thread-2 (]: On model.dbt_datavault.hub_customer: ROLLBACK
+[0m13:02:34.121294 [debug] [Thread-2 (]: On model.dbt_datavault.hub_customer: Close
+[0m13:02:34.123241 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '51f5f3ca-e5bc-4638-ae5e-0994abcb7a20', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f79fe8d1cd0>]}
+[0m13:02:34.125657 [info ] [Thread-2 (]: 4 of 8 OK created sql incremental model raw_vault_raw_vault.hub_customer ....... [[32mCREATE TABLE (1_200 rows)[0m in 1.51s]
+[0m13:02:34.126900 [debug] [Thread-2 (]: Finished running node model.dbt_datavault.hub_customer
+[0m13:02:34.127813 [debug] [Thread-2 (]: Began running node model.dbt_datavault.link_customer_country
+[0m13:02:34.129961 [debug] [Thread-4 (]: SQL status: DROP VIEW in 0.019 seconds
+[0m13:02:34.132105 [debug] [Thread-4 (]: On model.dbt_datavault.hub_country: ROLLBACK
+[0m13:02:34.130461 [info ] [Thread-2 (]: 6 of 8 START sql incremental model raw_vault_raw_vault.link_customer_country ... [RUN]
+[0m13:02:34.132569 [debug] [Thread-4 (]: On model.dbt_datavault.hub_country: Close
+[0m13:02:34.133116 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.021 seconds
+[0m13:02:34.133793 [debug] [Thread-3 (]: SQL status: DROP VIEW in 0.026 seconds
+[0m13:02:34.134139 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.dbt_datavault.hub_customer, now model.dbt_datavault.link_customer_country)
+[0m13:02:34.134784 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '51f5f3ca-e5bc-4638-ae5e-0994abcb7a20', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f79ffc2f920>]}
+[0m13:02:34.136112 [debug] [Thread-1 (]: On model.dbt_datavault.link_customer_category: ROLLBACK
+[0m13:02:34.137528 [debug] [Thread-3 (]: On model.dbt_datavault.hub_category: ROLLBACK
+[0m13:02:34.137954 [debug] [Thread-2 (]: Began compiling node model.dbt_datavault.link_customer_country
+[0m13:02:34.138558 [info ] [Thread-4 (]: 3 of 8 OK created sql incremental model raw_vault_raw_vault.hub_country ........ [[32mCREATE TABLE (15 rows)[0m in 1.52s]
+[0m13:02:34.138940 [debug] [Thread-1 (]: On model.dbt_datavault.link_customer_category: Close
+[0m13:02:34.139348 [debug] [Thread-3 (]: On model.dbt_datavault.hub_category: Close
+[0m13:02:34.142707 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_datavault.link_customer_country"
+[0m13:02:34.143281 [debug] [Thread-4 (]: Finished running node model.dbt_datavault.hub_country
+[0m13:02:34.143946 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '51f5f3ca-e5bc-4638-ae5e-0994abcb7a20', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f79fe96f680>]}
+[0m13:02:34.144379 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '51f5f3ca-e5bc-4638-ae5e-0994abcb7a20', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f79fe9be6f0>]}
+[0m13:02:34.144937 [debug] [Thread-4 (]: Began running node model.dbt_datavault.sat_customer_details
+[0m13:02:34.145637 [info ] [Thread-1 (]: 5 of 8 OK created sql incremental model raw_vault_raw_vault.link_customer_category  [[32mCREATE TABLE (1_200 rows)[0m in 1.53s]
+[0m13:02:34.146208 [info ] [Thread-3 (]: 2 of 8 OK created sql incremental model raw_vault_raw_vault.hub_category ....... [[32mCREATE TABLE (10 rows)[0m in 1.53s]
+[0m13:02:34.146833 [info ] [Thread-4 (]: 7 of 8 START sql incremental model raw_vault_raw_vault.sat_customer_details .... [RUN]
+[0m13:02:34.147516 [debug] [Thread-1 (]: Finished running node model.dbt_datavault.link_customer_category
+[0m13:02:34.148058 [debug] [Thread-3 (]: Finished running node model.dbt_datavault.hub_category
+[0m13:02:34.148548 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.dbt_datavault.hub_country, now model.dbt_datavault.sat_customer_details)
+[0m13:02:34.149057 [debug] [Thread-1 (]: Began running node model.dbt_datavault.sat_customer_metrics
+[0m13:02:34.149781 [debug] [Thread-4 (]: Began compiling node model.dbt_datavault.sat_customer_details
+[0m13:02:34.150287 [info ] [Thread-1 (]: 8 of 8 START sql incremental model raw_vault_raw_vault.sat_customer_metrics .... [RUN]
+[0m13:02:34.153838 [debug] [Thread-4 (]: Writing injected SQL for node "model.dbt_datavault.sat_customer_details"
+[0m13:02:34.154393 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_datavault.link_customer_category, now model.dbt_datavault.sat_customer_metrics)
+[0m13:02:34.154882 [debug] [Thread-2 (]: Began executing node model.dbt_datavault.link_customer_country
+[0m13:02:34.155210 [debug] [Thread-1 (]: Began compiling node model.dbt_datavault.sat_customer_metrics
+[0m13:02:34.158515 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_datavault.link_customer_country"
+[0m13:02:34.161650 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_datavault.sat_customer_metrics"
+[0m13:02:34.166498 [debug] [Thread-4 (]: Began executing node model.dbt_datavault.sat_customer_details
+[0m13:02:34.169876 [debug] [Thread-4 (]: Writing runtime sql for node "model.dbt_datavault.sat_customer_details"
+[0m13:02:34.172000 [debug] [Thread-2 (]: Using trino connection "model.dbt_datavault.link_customer_country"
+[0m13:02:34.172315 [debug] [Thread-1 (]: Began executing node model.dbt_datavault.sat_customer_metrics
+[0m13:02:34.172652 [debug] [Thread-2 (]: On model.dbt_datavault.link_customer_country: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.link_customer_country"} */
+
+  
+    
+
+    create table "hive"."raw_vault_raw_vault"."link_customer_country"
+      
+      
+    as (
+      
+
+with staged as (
+    select distinct
+        hk_customer_country,
+        hk_customer,
+        hk_country,
+        load_datetime,
+        record_source
+    from "hive"."raw_vault_staging"."stg_customers"
+)
+
+select * from staged
+
+
+    )
+[0m13:02:34.176252 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_datavault.sat_customer_metrics"
+[0m13:02:34.176710 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m13:02:34.179491 [debug] [Thread-4 (]: Using trino connection "model.dbt_datavault.sat_customer_details"
+[0m13:02:34.179943 [debug] [Thread-4 (]: On model.dbt_datavault.sat_customer_details: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.sat_customer_details"} */
+
+  
+    
+
+    create table "hive"."raw_vault_raw_vault"."sat_customer_details"
+      
+      
+    as (
+      
+
+with staged as (
+    select
+        hk_customer,
+        hd_customer_details,
+        age,
+        gender,
+        income_bracket,
+        loyalty_tier,
+        device_type,
+        preferred_payment_method,
+        newsletter_subscribed,
+        referral_source,
+        load_datetime,
+        record_source
+    from "hive"."raw_vault_staging"."stg_customers"
+)
+
+select * from staged s
+
+
+    )
+[0m13:02:34.180392 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m13:02:34.184695 [debug] [Thread-1 (]: Using trino connection "model.dbt_datavault.sat_customer_metrics"
+[0m13:02:34.185285 [debug] [Thread-1 (]: On model.dbt_datavault.sat_customer_metrics: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.sat_customer_metrics"} */
+
+  
+    
+
+    create table "hive"."raw_vault_raw_vault"."sat_customer_metrics"
+      
+      
+    as (
+      
+
+with staged as (
+    select
+        hk_customer,
+        hd_customer_metrics,
+        total_orders,
+        total_spent_usd,
+        avg_order_value_usd,
+        discount_usage_rate,
+        return_rate,
+        satisfaction_score,
+        customer_lifetime_days,
+        days_since_last_purchase,
+        avg_session_duration_min,
+        avg_pages_per_session,
+        churn,
+        load_datetime,
+        record_source
+    from "hive"."raw_vault_staging"."stg_customers"
+)
+
+select * from staged s
+
+
+    )
+[0m13:02:34.186244 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:02:34.621426 [debug] [Thread-2 (]: SQL status: CREATE TABLE (1_200 rows) in 0.445 seconds
+[0m13:02:34.626890 [debug] [Thread-2 (]: Applying DROP to: "hive"."raw_vault_raw_vault"."link_customer_country__dbt_tmp"
+[0m13:02:34.627870 [debug] [Thread-2 (]: Using trino connection "model.dbt_datavault.link_customer_country"
+[0m13:02:34.628311 [debug] [Thread-2 (]: On model.dbt_datavault.link_customer_country: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.link_customer_country"} */
+
+    drop view if exists "hive"."raw_vault_raw_vault"."link_customer_country__dbt_tmp"
+[0m13:02:34.701566 [debug] [Thread-4 (]: SQL status: CREATE TABLE (1_200 rows) in 0.521 seconds
+[0m13:02:34.705987 [debug] [Thread-4 (]: Applying DROP to: "hive"."raw_vault_raw_vault"."sat_customer_details__dbt_tmp"
+[0m13:02:34.706538 [debug] [Thread-1 (]: SQL status: CREATE TABLE (1_200 rows) in 0.520 seconds
+[0m13:02:34.707342 [debug] [Thread-4 (]: Using trino connection "model.dbt_datavault.sat_customer_details"
+[0m13:02:34.710275 [debug] [Thread-1 (]: Applying DROP to: "hive"."raw_vault_raw_vault"."sat_customer_metrics__dbt_tmp"
+[0m13:02:34.711063 [debug] [Thread-4 (]: On model.dbt_datavault.sat_customer_details: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.sat_customer_details"} */
+
+    drop view if exists "hive"."raw_vault_raw_vault"."sat_customer_details__dbt_tmp"
+[0m13:02:34.712570 [debug] [Thread-1 (]: Using trino connection "model.dbt_datavault.sat_customer_metrics"
+[0m13:02:34.713955 [debug] [Thread-1 (]: On model.dbt_datavault.sat_customer_metrics: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.sat_customer_metrics"} */
+
+    drop view if exists "hive"."raw_vault_raw_vault"."sat_customer_metrics__dbt_tmp"
+[0m13:02:34.723843 [debug] [Thread-2 (]: SQL status: DROP VIEW in 0.022 seconds
+[0m13:02:34.726634 [debug] [Thread-2 (]: On model.dbt_datavault.link_customer_country: ROLLBACK
+[0m13:02:34.727401 [debug] [Thread-2 (]: On model.dbt_datavault.link_customer_country: Close
+[0m13:02:34.727855 [debug] [Thread-4 (]: SQL status: DROP VIEW in 0.015 seconds
+[0m13:02:34.728498 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '51f5f3ca-e5bc-4638-ae5e-0994abcb7a20', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7a576dd880>]}
+[0m13:02:34.730034 [debug] [Thread-4 (]: On model.dbt_datavault.sat_customer_details: ROLLBACK
+[0m13:02:34.731244 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.017 seconds
+[0m13:02:34.730813 [info ] [Thread-2 (]: 6 of 8 OK created sql incremental model raw_vault_raw_vault.link_customer_country  [[32mCREATE TABLE (1_200 rows)[0m in 0.59s]
+[0m13:02:34.731779 [debug] [Thread-4 (]: On model.dbt_datavault.sat_customer_details: Close
+[0m13:02:34.733226 [debug] [Thread-1 (]: On model.dbt_datavault.sat_customer_metrics: ROLLBACK
+[0m13:02:34.733810 [debug] [Thread-2 (]: Finished running node model.dbt_datavault.link_customer_country
+[0m13:02:34.734426 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '51f5f3ca-e5bc-4638-ae5e-0994abcb7a20', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f79fc7cbe30>]}
+[0m13:02:34.734706 [debug] [Thread-1 (]: On model.dbt_datavault.sat_customer_metrics: Close
+[0m13:02:34.735525 [info ] [Thread-4 (]: 7 of 8 OK created sql incremental model raw_vault_raw_vault.sat_customer_details  [[32mCREATE TABLE (1_200 rows)[0m in 0.59s]
+[0m13:02:34.736076 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '51f5f3ca-e5bc-4638-ae5e-0994abcb7a20', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f79fc7bd730>]}
+[0m13:02:34.736478 [debug] [Thread-4 (]: Finished running node model.dbt_datavault.sat_customer_details
+[0m13:02:34.737033 [info ] [Thread-1 (]: 8 of 8 OK created sql incremental model raw_vault_raw_vault.sat_customer_metrics  [[32mCREATE TABLE (1_200 rows)[0m in 0.58s]
+[0m13:02:34.737878 [debug] [Thread-1 (]: Finished running node model.dbt_datavault.sat_customer_metrics
+[0m13:02:34.739389 [debug] [MainThread]: On master: COMMIT
+[0m13:02:34.739765 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:02:34.740059 [debug] [MainThread]: Connection 'model.dbt_datavault.link_customer_country' was properly closed.
+[0m13:02:34.740343 [debug] [MainThread]: Connection 'model.dbt_datavault.sat_customer_metrics' was properly closed.
+[0m13:02:34.740616 [debug] [MainThread]: Connection 'model.dbt_datavault.hub_category' was properly closed.
+[0m13:02:34.740903 [debug] [MainThread]: Connection 'model.dbt_datavault.sat_customer_details' was properly closed.
+[0m13:02:34.741259 [info ] [MainThread]: 
+[0m13:02:34.741653 [info ] [MainThread]: Finished running 7 incremental models, 1 view model in 0 hours 0 minutes and 3.61 seconds (3.61s).
+[0m13:02:34.742912 [debug] [MainThread]: Command end result
+[0m13:02:34.783260 [debug] [MainThread]: Wrote artifact WritableManifest to /workspace/dbt_datavault/target/manifest.json
+[0m13:02:34.787314 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspace/dbt_datavault/target/semantic_manifest.json
+[0m13:02:34.794407 [debug] [MainThread]: Wrote artifact RunExecutionResult to /workspace/dbt_datavault/target/run_results.json
+[0m13:02:34.794725 [info ] [MainThread]: 
+[0m13:02:34.795316 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:02:34.795898 [info ] [MainThread]: 
+[0m13:02:34.796333 [info ] [MainThread]: Done. PASS=8 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=8
+[0m13:02:34.798519 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 5.4578586, "process_in_blocks": "71776", "process_kernel_time": 0.398452, "process_mem_max_rss": "142004", "process_out_blocks": "0", "process_user_time": 4.598359}
+[0m13:02:34.799032 [debug] [MainThread]: Command `dbt run` succeeded at 13:02:34.798954 after 5.46 seconds
+[0m13:02:34.799394 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7a57d4e2d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7a58128740>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7a58128b00>]}
+[0m13:02:34.799744 [debug] [MainThread]: Flushing usage events
+[0m13:02:35.866725 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:11:32.148371 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4b4a36f500>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4b4a36caa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4b4a3f9e20>]}
+
+
+============================== 13:11:32.183125 | 6765a326-eb6c-4af8-bf11-e5e93e441067 ==============================
+[0m13:11:32.183125 [info ] [MainThread]: Running with dbt=1.11.11
+[0m13:11:32.183608 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'log_format': 'default', 'empty': 'False', 'use_colors': 'True', 'target_path': 'None', 'static_parser': 'True', 'profiles_dir': '.', 'quiet': 'False', 'introspect': 'True', 'printer_width': '80', 'debug': 'False', 'fail_fast': 'False', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'warn_error': 'None', 'no_print': 'None', 'cache_selected_only': 'False', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': '/workspace/dbt_datavault/logs', 'invocation_command': 'dbt run --profiles-dir .', 'write_json': 'True', 'log_cache_events': 'False'}
+[0m13:11:32.357888 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '6765a326-eb6c-4af8-bf11-e5e93e441067', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4b498b8ec0>]}
+[0m13:11:32.421639 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '6765a326-eb6c-4af8-bf11-e5e93e441067', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4b4a1fa8a0>]}
+[0m13:11:32.422387 [info ] [MainThread]: Registered adapter: trino=1.10.2
+[0m13:11:32.484053 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m13:11:32.560415 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m13:11:32.560943 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '6765a326-eb6c-4af8-bf11-e5e93e441067', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4b49915340>]}
+[0m13:11:36.477054 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '6765a326-eb6c-4af8-bf11-e5e93e441067', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4b4916ac90>]}
+[0m13:11:36.549132 [debug] [MainThread]: Wrote artifact WritableManifest to /workspace/dbt_datavault/target/manifest.json
+[0m13:11:36.552945 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspace/dbt_datavault/target/semantic_manifest.json
+[0m13:11:36.579155 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '6765a326-eb6c-4af8-bf11-e5e93e441067', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4b31c322d0>]}
+[0m13:11:36.579630 [info ] [MainThread]: Found 8 models, 12 data tests, 495 macros
+[0m13:11:36.579989 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6765a326-eb6c-4af8-bf11-e5e93e441067', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4b4949e870>]}
+[0m13:11:36.581618 [info ] [MainThread]: 
+[0m13:11:36.581998 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m13:11:36.582344 [info ] [MainThread]: 
+[0m13:11:36.582876 [debug] [MainThread]: Acquiring new trino connection 'master'
+[0m13:11:36.586763 [debug] [ThreadPool]: Acquiring new trino connection 'list_hive'
+[0m13:11:36.628254 [debug] [ThreadPool]: Using trino connection "list_hive"
+[0m13:11:36.628793 [debug] [ThreadPool]: On list_hive: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "connection_name": "list_hive"} */
+
+    select schema_name
+    from "hive".INFORMATION_SCHEMA.schemata
+[0m13:11:36.629096 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:11:36.629372 [warn ] [ThreadPool]: [[33mWARNING[0m]: SSL certificate validation is disabled by default. It is legacy behavior which will be changed in future releases. It is strongly advised to enable `require_certificate_validation` flag or explicitly set `cert` configuration to `True` for security reasons. You may receive an error after that if your SSL setup is incorrect.
+You may opt into the new behavior sooner by setting `flags.require_certificate_validation` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m13:11:36.629902 [debug] [ThreadPool]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': '6765a326-eb6c-4af8-bf11-e5e93e441067', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4b31d6bef0>]}
+[0m13:11:36.656571 [debug] [ThreadPool]: SQL status: SUCCESS in 0.027 seconds
+[0m13:11:36.657876 [debug] [ThreadPool]: On list_hive: Close
+[0m13:11:36.659721 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_hive, now list_hive_raw_vault)
+[0m13:11:36.671477 [debug] [ThreadPool]: Using trino connection "list_hive_raw_vault"
+[0m13:11:36.671886 [debug] [ThreadPool]: On list_hive_raw_vault: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "connection_name": "list_hive_raw_vault"} */
+select
+      t.table_catalog as database,
+      t.table_name as name,
+      t.table_schema as schema,
+      case when mv.name is not null then 'materialized_view'
+           when t.table_type = 'BASE TABLE' then 'table'
+           when t.table_type = 'VIEW' then 'view'
+           else t.table_type
+      end as table_type
+    from "hive".INFORMATION_SCHEMA.tables t
+    left join (
+            select * from system.metadata.materialized_views
+            where catalog_name = 'hive'
+              and schema_name = 'raw_vault') mv
+          on mv.catalog_name = t.table_catalog and mv.schema_name = t.table_schema and mv.name = t.table_name
+    where t.table_schema = 'raw_vault'
+[0m13:11:36.672329 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:11:36.724954 [debug] [ThreadPool]: SQL status: SUCCESS in 0.053 seconds
+[0m13:11:36.726324 [debug] [ThreadPool]: On list_hive_raw_vault: ROLLBACK
+[0m13:11:36.726741 [debug] [ThreadPool]: On list_hive_raw_vault: Close
+[0m13:11:36.727727 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6765a326-eb6c-4af8-bf11-e5e93e441067', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4b499189b0>]}
+[0m13:11:36.728200 [debug] [MainThread]: On master: COMMIT
+[0m13:11:36.732424 [debug] [Thread-1 (]: Began running node model.dbt_datavault.hub_category
+[0m13:11:36.732845 [debug] [Thread-2 (]: Began running node model.dbt_datavault.hub_country
+[0m13:11:36.733160 [debug] [Thread-3 (]: Began running node model.dbt_datavault.hub_customer
+[0m13:11:36.733807 [debug] [Thread-4 (]: Began running node model.dbt_datavault.link_customer_category
+[0m13:11:36.733560 [info ] [Thread-1 (]: 1 of 8 START sql incremental model raw_vault.hub_category ...................... [RUN]
+[0m13:11:36.734395 [info ] [Thread-2 (]: 2 of 8 START sql incremental model raw_vault.hub_country ....................... [RUN]
+[0m13:11:36.735038 [info ] [Thread-3 (]: 3 of 8 START sql incremental model raw_vault.hub_customer ...................... [RUN]
+[0m13:11:36.735638 [info ] [Thread-4 (]: 4 of 8 START sql incremental model raw_vault.link_customer_category ............ [RUN]
+[0m13:11:36.736249 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_hive_raw_vault, now model.dbt_datavault.hub_category)
+[0m13:11:36.736836 [debug] [Thread-2 (]: Acquiring new trino connection 'model.dbt_datavault.hub_country'
+[0m13:11:36.737350 [debug] [Thread-3 (]: Acquiring new trino connection 'model.dbt_datavault.hub_customer'
+[0m13:11:36.737850 [debug] [Thread-4 (]: Acquiring new trino connection 'model.dbt_datavault.link_customer_category'
+[0m13:11:36.738268 [debug] [Thread-1 (]: Began compiling node model.dbt_datavault.hub_category
+[0m13:11:36.738666 [debug] [Thread-2 (]: Began compiling node model.dbt_datavault.hub_country
+[0m13:11:36.739037 [debug] [Thread-3 (]: Began compiling node model.dbt_datavault.hub_customer
+[0m13:11:36.739401 [debug] [Thread-4 (]: Began compiling node model.dbt_datavault.link_customer_category
+[0m13:11:36.762037 [debug] [Thread-3 (]: Compilation Error in model hub_customer (models/raw_vault/hubs/hub_customer.sql)
+  dbt was unable to infer all dependencies for the model "hub_customer".
+  This typically happens when ref() is placed within a conditional block.
+  
+  To fix this, add the following hint to the top of the model "hub_customer":
+  
+  -- depends_on: {{ ref('stg_customers') }}
+[0m13:11:36.764909 [debug] [Thread-1 (]: Compilation Error in model hub_category (models/raw_vault/hubs/hub_category.sql)
+  dbt was unable to infer all dependencies for the model "hub_category".
+  This typically happens when ref() is placed within a conditional block.
+  
+  To fix this, add the following hint to the top of the model "hub_category":
+  
+  -- depends_on: {{ ref('stg_customers') }}
+[0m13:11:36.765705 [debug] [Thread-4 (]: Compilation Error in model link_customer_category (models/raw_vault/links/link_customer_category.sql)
+  dbt was unable to infer all dependencies for the model "link_customer_category".
+  This typically happens when ref() is placed within a conditional block.
+  
+  To fix this, add the following hint to the top of the model "link_customer_category":
+  
+  -- depends_on: {{ ref('stg_customers') }}
+[0m13:11:36.766278 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6765a326-eb6c-4af8-bf11-e5e93e441067', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4b31d94500>]}
+[0m13:11:36.766702 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6765a326-eb6c-4af8-bf11-e5e93e441067', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4b31bf87a0>]}
+[0m13:11:36.767412 [debug] [Thread-2 (]: Compilation Error in model hub_country (models/raw_vault/hubs/hub_country.sql)
+  dbt was unable to infer all dependencies for the model "hub_country".
+  This typically happens when ref() is placed within a conditional block.
+  
+  To fix this, add the following hint to the top of the model "hub_country":
+  
+  -- depends_on: {{ ref('stg_customers') }}
+[0m13:11:36.767717 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6765a326-eb6c-4af8-bf11-e5e93e441067', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4b31031b80>]}
+[0m13:11:36.768337 [error] [Thread-3 (]: 3 of 8 ERROR creating sql incremental model raw_vault.hub_customer ............. [[31mERROR[0m in 0.03s]
+[0m13:11:36.768868 [error] [Thread-1 (]: 1 of 8 ERROR creating sql incremental model raw_vault.hub_category ............. [[31mERROR[0m in 0.03s]
+[0m13:11:36.769375 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6765a326-eb6c-4af8-bf11-e5e93e441067', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4b3106f9e0>]}
+[0m13:11:36.769994 [error] [Thread-4 (]: 4 of 8 ERROR creating sql incremental model raw_vault.link_customer_category ... [[31mERROR[0m in 0.03s]
+[0m13:11:36.770578 [debug] [Thread-3 (]: Finished running node model.dbt_datavault.hub_customer
+[0m13:11:36.771055 [debug] [Thread-1 (]: Finished running node model.dbt_datavault.hub_category
+[0m13:11:36.771579 [error] [Thread-2 (]: 2 of 8 ERROR creating sql incremental model raw_vault.hub_country .............. [[31mERROR[0m in 0.03s]
+[0m13:11:36.772163 [debug] [Thread-4 (]: Finished running node model.dbt_datavault.link_customer_category
+[0m13:11:36.772707 [debug] [Thread-3 (]: Began running node model.dbt_datavault.link_customer_country
+[0m13:11:36.773135 [debug] [Thread-7 (]: Marking all children of 'model.dbt_datavault.hub_customer' to be skipped because of status 'error'.  Reason: Compilation Error in model hub_customer (models/raw_vault/hubs/hub_customer.sql)
+  dbt was unable to infer all dependencies for the model "hub_customer".
+  This typically happens when ref() is placed within a conditional block.
+  
+  To fix this, add the following hint to the top of the model "hub_customer":
+  
+  -- depends_on: {{ ref('stg_customers') }}.
+[0m13:11:36.773514 [debug] [Thread-1 (]: Began running node model.dbt_datavault.sat_customer_details
+[0m13:11:36.774052 [debug] [Thread-2 (]: Finished running node model.dbt_datavault.hub_country
+[0m13:11:36.774498 [debug] [Thread-4 (]: Began running node model.dbt_datavault.sat_customer_metrics
+[0m13:11:36.775004 [info ] [Thread-3 (]: 5 of 8 START sql incremental model raw_vault.link_customer_country ............. [RUN]
+[0m13:11:36.775956 [debug] [Thread-7 (]: Marking all children of 'model.dbt_datavault.hub_category' to be skipped because of status 'error'.  Reason: Compilation Error in model hub_category (models/raw_vault/hubs/hub_category.sql)
+  dbt was unable to infer all dependencies for the model "hub_category".
+  This typically happens when ref() is placed within a conditional block.
+  
+  To fix this, add the following hint to the top of the model "hub_category":
+  
+  -- depends_on: {{ ref('stg_customers') }}.
+[0m13:11:36.776453 [info ] [Thread-1 (]: 6 of 8 START sql incremental model raw_vault.sat_customer_details .............. [RUN]
+[0m13:11:36.776903 [debug] [Thread-2 (]: Began running node model.dbt_datavault.stg_customers
+[0m13:11:36.777479 [info ] [Thread-4 (]: 7 of 8 START sql incremental model raw_vault.sat_customer_metrics .............. [RUN]
+[0m13:11:36.778051 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.dbt_datavault.hub_customer, now model.dbt_datavault.link_customer_country)
+[0m13:11:36.778572 [debug] [Thread-7 (]: Marking all children of 'model.dbt_datavault.link_customer_category' to be skipped because of status 'error'.  Reason: Compilation Error in model link_customer_category (models/raw_vault/links/link_customer_category.sql)
+  dbt was unable to infer all dependencies for the model "link_customer_category".
+  This typically happens when ref() is placed within a conditional block.
+  
+  To fix this, add the following hint to the top of the model "link_customer_category":
+  
+  -- depends_on: {{ ref('stg_customers') }}.
+[0m13:11:36.779019 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_datavault.hub_category, now model.dbt_datavault.sat_customer_details)
+[0m13:11:36.779539 [info ] [Thread-2 (]: 8 of 8 START sql view model raw_vault.stg_customers ............................ [RUN]
+[0m13:11:36.779962 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.dbt_datavault.link_customer_category, now model.dbt_datavault.sat_customer_metrics)
+[0m13:11:36.780393 [debug] [Thread-3 (]: Began compiling node model.dbt_datavault.link_customer_country
+[0m13:11:36.780942 [debug] [Thread-7 (]: Marking all children of 'model.dbt_datavault.hub_country' to be skipped because of status 'error'.  Reason: Compilation Error in model hub_country (models/raw_vault/hubs/hub_country.sql)
+  dbt was unable to infer all dependencies for the model "hub_country".
+  This typically happens when ref() is placed within a conditional block.
+  
+  To fix this, add the following hint to the top of the model "hub_country":
+  
+  -- depends_on: {{ ref('stg_customers') }}.
+[0m13:11:36.781350 [debug] [Thread-1 (]: Began compiling node model.dbt_datavault.sat_customer_details
+[0m13:11:36.781762 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.dbt_datavault.hub_country, now model.dbt_datavault.stg_customers)
+[0m13:11:36.782156 [debug] [Thread-4 (]: Began compiling node model.dbt_datavault.sat_customer_metrics
+[0m13:11:36.786247 [debug] [Thread-3 (]: Compilation Error in model link_customer_country (models/raw_vault/links/link_customer_country.sql)
+  dbt was unable to infer all dependencies for the model "link_customer_country".
+  This typically happens when ref() is placed within a conditional block.
+  
+  To fix this, add the following hint to the top of the model "link_customer_country":
+  
+  -- depends_on: {{ ref('stg_customers') }}
+[0m13:11:36.791287 [debug] [Thread-1 (]: Compilation Error in model sat_customer_details (models/raw_vault/satellites/sat_customer_details.sql)
+  dbt was unable to infer all dependencies for the model "sat_customer_details".
+  This typically happens when ref() is placed within a conditional block.
+  
+  To fix this, add the following hint to the top of the model "sat_customer_details":
+  
+  -- depends_on: {{ ref('stg_customers') }}
+[0m13:11:36.791642 [debug] [Thread-2 (]: Began compiling node model.dbt_datavault.stg_customers
+[0m13:11:36.867924 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6765a326-eb6c-4af8-bf11-e5e93e441067', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4b306f4b00>]}
+[0m13:11:36.868712 [debug] [Thread-4 (]: Compilation Error in model sat_customer_metrics (models/raw_vault/satellites/sat_customer_metrics.sql)
+  dbt was unable to infer all dependencies for the model "sat_customer_metrics".
+  This typically happens when ref() is placed within a conditional block.
+  
+  To fix this, add the following hint to the top of the model "sat_customer_metrics":
+  
+  -- depends_on: {{ ref('stg_customers') }}
+[0m13:11:36.869010 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6765a326-eb6c-4af8-bf11-e5e93e441067', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4b3106c200>]}
+[0m13:11:36.871573 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_datavault.stg_customers"
+[0m13:11:36.872285 [error] [Thread-3 (]: 5 of 8 ERROR creating sql incremental model raw_vault.link_customer_country .... [[31mERROR[0m in 0.09s]
+[0m13:11:36.872728 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6765a326-eb6c-4af8-bf11-e5e93e441067', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4b4c2a9790>]}
+[0m13:11:36.873339 [error] [Thread-1 (]: 6 of 8 ERROR creating sql incremental model raw_vault.sat_customer_details ..... [[31mERROR[0m in 0.09s]
+[0m13:11:36.874120 [debug] [Thread-3 (]: Finished running node model.dbt_datavault.link_customer_country
+[0m13:11:36.874775 [error] [Thread-4 (]: 7 of 8 ERROR creating sql incremental model raw_vault.sat_customer_metrics ..... [[31mERROR[0m in 0.09s]
+[0m13:11:36.875244 [debug] [Thread-1 (]: Finished running node model.dbt_datavault.sat_customer_details
+[0m13:11:36.875858 [debug] [Thread-7 (]: Marking all children of 'model.dbt_datavault.link_customer_country' to be skipped because of status 'error'.  Reason: Compilation Error in model link_customer_country (models/raw_vault/links/link_customer_country.sql)
+  dbt was unable to infer all dependencies for the model "link_customer_country".
+  This typically happens when ref() is placed within a conditional block.
+  
+  To fix this, add the following hint to the top of the model "link_customer_country":
+  
+  -- depends_on: {{ ref('stg_customers') }}.
+[0m13:11:36.876218 [debug] [Thread-4 (]: Finished running node model.dbt_datavault.sat_customer_metrics
+[0m13:11:36.876949 [debug] [Thread-7 (]: Marking all children of 'model.dbt_datavault.sat_customer_details' to be skipped because of status 'error'.  Reason: Compilation Error in model sat_customer_details (models/raw_vault/satellites/sat_customer_details.sql)
+  dbt was unable to infer all dependencies for the model "sat_customer_details".
+  This typically happens when ref() is placed within a conditional block.
+  
+  To fix this, add the following hint to the top of the model "sat_customer_details":
+  
+  -- depends_on: {{ ref('stg_customers') }}.
+[0m13:11:36.877584 [debug] [Thread-7 (]: Marking all children of 'model.dbt_datavault.sat_customer_metrics' to be skipped because of status 'error'.  Reason: Compilation Error in model sat_customer_metrics (models/raw_vault/satellites/sat_customer_metrics.sql)
+  dbt was unable to infer all dependencies for the model "sat_customer_metrics".
+  This typically happens when ref() is placed within a conditional block.
+  
+  To fix this, add the following hint to the top of the model "sat_customer_metrics":
+  
+  -- depends_on: {{ ref('stg_customers') }}.
+[0m13:11:36.879656 [debug] [Thread-2 (]: Began executing node model.dbt_datavault.stg_customers
+[0m13:11:36.898387 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_datavault.stg_customers"
+[0m13:11:36.911300 [debug] [Thread-2 (]: Using trino connection "model.dbt_datavault.stg_customers"
+[0m13:11:36.911822 [debug] [Thread-2 (]: On model.dbt_datavault.stg_customers: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.stg_customers"} */
+
+  create or replace view
+    "hive"."raw_vault"."stg_customers"
+  security definer
+  as
+    
+
+with source as (
+    select * from hive.raw_vault.raw_customers
+),
+
+staged as (
+    select
+        -- Business Keys
+        customer_id,
+        country,
+        preferred_category,
+
+        -- Hash Keys (Data Vault pattern)
+        cast(to_hex(sha256(cast(customer_id as varbinary))) as varchar) as hk_customer,
+        cast(to_hex(sha256(cast(country as varbinary))) as varchar) as hk_country,
+        cast(to_hex(sha256(cast(preferred_category as varbinary))) as varchar) as hk_category,
+        cast(to_hex(sha256(cast(concat(customer_id, '||', country) as varbinary))) as varchar) as hk_customer_country,
+        cast(to_hex(sha256(cast(concat(customer_id, '||', preferred_category) as varbinary))) as varchar) as hk_customer_category,
+
+        -- Hash Diff (detectar mudanças nos satellites)
+        cast(to_hex(sha256(cast(concat(
+            coalesce(cast(age as varchar), ''),
+            coalesce(gender, ''),
+            coalesce(income_bracket, ''),
+            coalesce(loyalty_tier, ''),
+            coalesce(device_type, ''),
+            coalesce(preferred_payment_method, '')
+        ) as varbinary))) as varchar) as hd_customer_details,
+
+        cast(to_hex(sha256(cast(concat(
+            coalesce(cast(total_orders as varchar), ''),
+            coalesce(cast(total_spent_usd as varchar), ''),
+            coalesce(cast(avg_order_value_usd as varchar), ''),
+            coalesce(cast(discount_usage_rate as varchar), ''),
+            coalesce(cast(return_rate as varchar), ''),
+            coalesce(cast(satisfaction_score as varchar), '')
+        ) as varbinary))) as varchar) as hd_customer_metrics,
+
+        -- Attributes
+        age,
+        gender,
+        region,
+        income_bracket,
+        signup_date,
+        last_purchase_date,
+        customer_lifetime_days,
+        days_since_last_purchase,
+        total_orders,
+        total_spent_usd,
+        avg_order_value_usd,
+        preferred_payment_method,
+        device_type,
+        loyalty_tier,
+        discount_usage_rate,
+        return_rate,
+        newsletter_subscribed,
+        referral_source,
+        avg_session_duration_min,
+        avg_pages_per_session,
+        satisfaction_score,
+        churn,
+
+        -- Metadata
+        load_datetime,
+        record_source
+    from source
+)
+
+select * from staged
+  
+[0m13:11:36.912242 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m13:11:36.951902 [debug] [Thread-2 (]: SQL status: CREATE VIEW in 0.040 seconds
+[0m13:11:36.968951 [debug] [Thread-2 (]: On model.dbt_datavault.stg_customers: ROLLBACK
+[0m13:11:36.969646 [debug] [Thread-2 (]: On model.dbt_datavault.stg_customers: Close
+[0m13:11:36.970581 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6765a326-eb6c-4af8-bf11-e5e93e441067', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4b49009af0>]}
+[0m13:11:36.971227 [info ] [Thread-2 (]: 8 of 8 OK created sql view model raw_vault.stg_customers ....................... [[32mCREATE VIEW[0m in 0.19s]
+[0m13:11:36.971822 [debug] [Thread-2 (]: Finished running node model.dbt_datavault.stg_customers
+[0m13:11:36.973736 [debug] [MainThread]: On master: COMMIT
+[0m13:11:36.974151 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:11:36.974452 [debug] [MainThread]: Connection 'model.dbt_datavault.sat_customer_details' was properly closed.
+[0m13:11:36.974743 [debug] [MainThread]: Connection 'model.dbt_datavault.stg_customers' was properly closed.
+[0m13:11:36.975022 [debug] [MainThread]: Connection 'model.dbt_datavault.link_customer_country' was properly closed.
+[0m13:11:36.975305 [debug] [MainThread]: Connection 'model.dbt_datavault.sat_customer_metrics' was properly closed.
+[0m13:11:36.975671 [info ] [MainThread]: 
+[0m13:11:36.976038 [info ] [MainThread]: Finished running 7 incremental models, 1 view model in 0 hours 0 minutes and 0.39 seconds (0.39s).
+[0m13:11:36.977068 [debug] [MainThread]: Command end result
+[0m13:11:37.016668 [debug] [MainThread]: Wrote artifact WritableManifest to /workspace/dbt_datavault/target/manifest.json
+[0m13:11:37.020648 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspace/dbt_datavault/target/semantic_manifest.json
+[0m13:11:37.027624 [debug] [MainThread]: Wrote artifact RunExecutionResult to /workspace/dbt_datavault/target/run_results.json
+[0m13:11:37.027960 [info ] [MainThread]: 
+[0m13:11:37.028383 [info ] [MainThread]: [31mCompleted with 7 errors, 0 partial successes, and 0 warnings:[0m
+[0m13:11:37.028818 [info ] [MainThread]: 
+[0m13:11:37.029315 [error] [MainThread]: [31mFailure in model hub_customer (models/raw_vault/hubs/hub_customer.sql)[0m
+[0m13:11:37.029809 [error] [MainThread]:   Compilation Error in model hub_customer (models/raw_vault/hubs/hub_customer.sql)
+  dbt was unable to infer all dependencies for the model "hub_customer".
+  This typically happens when ref() is placed within a conditional block.
+  
+  To fix this, add the following hint to the top of the model "hub_customer":
+  
+  -- depends_on: {{ ref('stg_customers') }}
+[0m13:11:37.030309 [info ] [MainThread]: 
+[0m13:11:37.030739 [error] [MainThread]: [31mFailure in model hub_category (models/raw_vault/hubs/hub_category.sql)[0m
+[0m13:11:37.031196 [error] [MainThread]:   Compilation Error in model hub_category (models/raw_vault/hubs/hub_category.sql)
+  dbt was unable to infer all dependencies for the model "hub_category".
+  This typically happens when ref() is placed within a conditional block.
+  
+  To fix this, add the following hint to the top of the model "hub_category":
+  
+  -- depends_on: {{ ref('stg_customers') }}
+[0m13:11:37.031598 [info ] [MainThread]: 
+[0m13:11:37.032047 [error] [MainThread]: [31mFailure in model link_customer_category (models/raw_vault/links/link_customer_category.sql)[0m
+[0m13:11:37.032523 [error] [MainThread]:   Compilation Error in model link_customer_category (models/raw_vault/links/link_customer_category.sql)
+  dbt was unable to infer all dependencies for the model "link_customer_category".
+  This typically happens when ref() is placed within a conditional block.
+  
+  To fix this, add the following hint to the top of the model "link_customer_category":
+  
+  -- depends_on: {{ ref('stg_customers') }}
+[0m13:11:37.032982 [info ] [MainThread]: 
+[0m13:11:37.033416 [error] [MainThread]: [31mFailure in model hub_country (models/raw_vault/hubs/hub_country.sql)[0m
+[0m13:11:37.033872 [error] [MainThread]:   Compilation Error in model hub_country (models/raw_vault/hubs/hub_country.sql)
+  dbt was unable to infer all dependencies for the model "hub_country".
+  This typically happens when ref() is placed within a conditional block.
+  
+  To fix this, add the following hint to the top of the model "hub_country":
+  
+  -- depends_on: {{ ref('stg_customers') }}
+[0m13:11:37.034254 [info ] [MainThread]: 
+[0m13:11:37.034703 [error] [MainThread]: [31mFailure in model link_customer_country (models/raw_vault/links/link_customer_country.sql)[0m
+[0m13:11:37.035192 [error] [MainThread]:   Compilation Error in model link_customer_country (models/raw_vault/links/link_customer_country.sql)
+  dbt was unable to infer all dependencies for the model "link_customer_country".
+  This typically happens when ref() is placed within a conditional block.
+  
+  To fix this, add the following hint to the top of the model "link_customer_country":
+  
+  -- depends_on: {{ ref('stg_customers') }}
+[0m13:11:37.035622 [info ] [MainThread]: 
+[0m13:11:37.036250 [error] [MainThread]: [31mFailure in model sat_customer_details (models/raw_vault/satellites/sat_customer_details.sql)[0m
+[0m13:11:37.036717 [error] [MainThread]:   Compilation Error in model sat_customer_details (models/raw_vault/satellites/sat_customer_details.sql)
+  dbt was unable to infer all dependencies for the model "sat_customer_details".
+  This typically happens when ref() is placed within a conditional block.
+  
+  To fix this, add the following hint to the top of the model "sat_customer_details":
+  
+  -- depends_on: {{ ref('stg_customers') }}
+[0m13:11:37.037095 [info ] [MainThread]: 
+[0m13:11:37.037538 [error] [MainThread]: [31mFailure in model sat_customer_metrics (models/raw_vault/satellites/sat_customer_metrics.sql)[0m
+[0m13:11:37.037977 [error] [MainThread]:   Compilation Error in model sat_customer_metrics (models/raw_vault/satellites/sat_customer_metrics.sql)
+  dbt was unable to infer all dependencies for the model "sat_customer_metrics".
+  This typically happens when ref() is placed within a conditional block.
+  
+  To fix this, add the following hint to the top of the model "sat_customer_metrics":
+  
+  -- depends_on: {{ ref('stg_customers') }}
+[0m13:11:37.038377 [info ] [MainThread]: 
+[0m13:11:37.038815 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=7 SKIP=0 NO-OP=0 TOTAL=8
+[0m13:11:37.039737 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 2.2263095, "process_in_blocks": "16", "process_kernel_time": 0.282883, "process_mem_max_rss": "139840", "process_out_blocks": "0", "process_user_time": 4.199737}
+[0m13:11:37.040254 [debug] [MainThread]: Command `dbt run` failed at 13:11:37.040173 after 2.23 seconds
+[0m13:11:37.040701 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4b4c2a9790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4b306f4b00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4b306f4ce0>]}
+[0m13:11:37.041090 [debug] [MainThread]: Flushing usage events
+[0m13:11:37.774109 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:14:13.470127 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa6876a62d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa6873b7920>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa6873b6e70>]}
+
+
+============================== 13:14:13.505851 | ff115ff1-eed6-4b92-b8bf-a52ef7df298c ==============================
+[0m13:14:13.505851 [info ] [MainThread]: Running with dbt=1.11.11
+[0m13:14:13.506481 [debug] [MainThread]: running dbt with arguments {'quiet': 'False', 'printer_width': '80', 'partial_parse': 'True', 'empty': 'False', 'write_json': 'True', 'version_check': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'use_colors': 'True', 'no_print': 'None', 'use_experimental_parser': 'False', 'invocation_command': 'dbt run --profiles-dir .', 'log_format': 'default', 'static_parser': 'True', 'profiles_dir': '.', 'indirect_selection': 'eager', 'fail_fast': 'False', 'target_path': 'None', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False', 'log_path': '/workspace/dbt_datavault/logs', 'warn_error': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'debug': 'False'}
+[0m13:14:13.700916 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ff115ff1-eed6-4b92-b8bf-a52ef7df298c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa686126840>]}
+[0m13:14:13.767280 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ff115ff1-eed6-4b92-b8bf-a52ef7df298c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa686d820c0>]}
+[0m13:14:13.768009 [info ] [MainThread]: Registered adapter: trino=1.10.2
+[0m13:14:13.834084 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m13:14:14.040974 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 7 files changed.
+[0m13:14:14.041701 [debug] [MainThread]: Partial parsing: updated file: dbt_datavault://models/raw_vault/hubs/hub_category.sql
+[0m13:14:14.042193 [debug] [MainThread]: Partial parsing: updated file: dbt_datavault://models/raw_vault/hubs/hub_country.sql
+[0m13:14:14.042645 [debug] [MainThread]: Partial parsing: updated file: dbt_datavault://models/raw_vault/hubs/hub_customer.sql
+[0m13:14:14.043127 [debug] [MainThread]: Partial parsing: updated file: dbt_datavault://models/raw_vault/satellites/sat_customer_metrics.sql
+[0m13:14:14.043593 [debug] [MainThread]: Partial parsing: updated file: dbt_datavault://models/raw_vault/satellites/sat_customer_details.sql
+[0m13:14:14.044416 [debug] [MainThread]: Partial parsing: updated file: dbt_datavault://models/raw_vault/links/link_customer_category.sql
+[0m13:14:14.045036 [debug] [MainThread]: Partial parsing: updated file: dbt_datavault://models/raw_vault/links/link_customer_country.sql
+[0m13:14:14.578260 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ff115ff1-eed6-4b92-b8bf-a52ef7df298c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa685841b50>]}
+[0m13:14:14.657474 [debug] [MainThread]: Wrote artifact WritableManifest to /workspace/dbt_datavault/target/manifest.json
+[0m13:14:14.661701 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspace/dbt_datavault/target/semantic_manifest.json
+[0m13:14:14.690867 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ff115ff1-eed6-4b92-b8bf-a52ef7df298c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa68597ab40>]}
+[0m13:14:14.691370 [info ] [MainThread]: Found 8 models, 12 data tests, 495 macros
+[0m13:14:14.691762 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ff115ff1-eed6-4b92-b8bf-a52ef7df298c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa68597a450>]}
+[0m13:14:14.693623 [info ] [MainThread]: 
+[0m13:14:14.694063 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m13:14:14.694454 [info ] [MainThread]: 
+[0m13:14:14.695032 [debug] [MainThread]: Acquiring new trino connection 'master'
+[0m13:14:14.699424 [debug] [ThreadPool]: Acquiring new trino connection 'list_hive'
+[0m13:14:14.745838 [debug] [ThreadPool]: Using trino connection "list_hive"
+[0m13:14:14.746392 [debug] [ThreadPool]: On list_hive: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "connection_name": "list_hive"} */
+
+    select schema_name
+    from "hive".INFORMATION_SCHEMA.schemata
+[0m13:14:14.746740 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:14:14.747076 [warn ] [ThreadPool]: [[33mWARNING[0m]: SSL certificate validation is disabled by default. It is legacy behavior which will be changed in future releases. It is strongly advised to enable `require_certificate_validation` flag or explicitly set `cert` configuration to `True` for security reasons. You may receive an error after that if your SSL setup is incorrect.
+You may opt into the new behavior sooner by setting `flags.require_certificate_validation` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m13:14:14.747599 [debug] [ThreadPool]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': 'ff115ff1-eed6-4b92-b8bf-a52ef7df298c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa685869160>]}
+[0m13:14:14.781978 [debug] [ThreadPool]: SQL status: SUCCESS in 0.035 seconds
+[0m13:14:14.783619 [debug] [ThreadPool]: On list_hive: Close
+[0m13:14:14.785770 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_hive, now list_hive_raw_vault)
+[0m13:14:14.798800 [debug] [ThreadPool]: Using trino connection "list_hive_raw_vault"
+[0m13:14:14.799338 [debug] [ThreadPool]: On list_hive_raw_vault: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "connection_name": "list_hive_raw_vault"} */
+select
+      t.table_catalog as database,
+      t.table_name as name,
+      t.table_schema as schema,
+      case when mv.name is not null then 'materialized_view'
+           when t.table_type = 'BASE TABLE' then 'table'
+           when t.table_type = 'VIEW' then 'view'
+           else t.table_type
+      end as table_type
+    from "hive".INFORMATION_SCHEMA.tables t
+    left join (
+            select * from system.metadata.materialized_views
+            where catalog_name = 'hive'
+              and schema_name = 'raw_vault') mv
+          on mv.catalog_name = t.table_catalog and mv.schema_name = t.table_schema and mv.name = t.table_name
+    where t.table_schema = 'raw_vault'
+[0m13:14:14.801739 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:14:14.864921 [debug] [ThreadPool]: SQL status: SUCCESS in 0.063 seconds
+[0m13:14:14.866697 [debug] [ThreadPool]: On list_hive_raw_vault: ROLLBACK
+[0m13:14:14.867768 [debug] [ThreadPool]: On list_hive_raw_vault: Close
+[0m13:14:14.869660 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ff115ff1-eed6-4b92-b8bf-a52ef7df298c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa68567c9b0>]}
+[0m13:14:14.870441 [debug] [MainThread]: On master: COMMIT
+[0m13:14:14.875161 [debug] [Thread-1 (]: Began running node model.dbt_datavault.stg_customers
+[0m13:14:14.875892 [info ] [Thread-1 (]: 1 of 8 START sql view model raw_vault.stg_customers ............................ [RUN]
+[0m13:14:14.876481 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_hive_raw_vault, now model.dbt_datavault.stg_customers)
+[0m13:14:14.876965 [debug] [Thread-1 (]: Began compiling node model.dbt_datavault.stg_customers
+[0m13:14:14.880635 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_datavault.stg_customers"
+[0m13:14:14.887012 [debug] [Thread-1 (]: Began executing node model.dbt_datavault.stg_customers
+[0m13:14:14.905898 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_datavault.stg_customers"
+[0m13:14:14.918868 [debug] [Thread-1 (]: Using trino connection "model.dbt_datavault.stg_customers"
+[0m13:14:14.919541 [debug] [Thread-1 (]: On model.dbt_datavault.stg_customers: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.stg_customers"} */
+
+  create or replace view
+    "hive"."raw_vault"."stg_customers"
+  security definer
+  as
+    
+
+with source as (
+    select * from hive.raw_vault.raw_customers
+),
+
+staged as (
+    select
+        -- Business Keys
+        customer_id,
+        country,
+        preferred_category,
+
+        -- Hash Keys (Data Vault pattern)
+        cast(to_hex(sha256(cast(customer_id as varbinary))) as varchar) as hk_customer,
+        cast(to_hex(sha256(cast(country as varbinary))) as varchar) as hk_country,
+        cast(to_hex(sha256(cast(preferred_category as varbinary))) as varchar) as hk_category,
+        cast(to_hex(sha256(cast(concat(customer_id, '||', country) as varbinary))) as varchar) as hk_customer_country,
+        cast(to_hex(sha256(cast(concat(customer_id, '||', preferred_category) as varbinary))) as varchar) as hk_customer_category,
+
+        -- Hash Diff (detectar mudanças nos satellites)
+        cast(to_hex(sha256(cast(concat(
+            coalesce(cast(age as varchar), ''),
+            coalesce(gender, ''),
+            coalesce(income_bracket, ''),
+            coalesce(loyalty_tier, ''),
+            coalesce(device_type, ''),
+            coalesce(preferred_payment_method, '')
+        ) as varbinary))) as varchar) as hd_customer_details,
+
+        cast(to_hex(sha256(cast(concat(
+            coalesce(cast(total_orders as varchar), ''),
+            coalesce(cast(total_spent_usd as varchar), ''),
+            coalesce(cast(avg_order_value_usd as varchar), ''),
+            coalesce(cast(discount_usage_rate as varchar), ''),
+            coalesce(cast(return_rate as varchar), ''),
+            coalesce(cast(satisfaction_score as varchar), '')
+        ) as varbinary))) as varchar) as hd_customer_metrics,
+
+        -- Attributes
+        age,
+        gender,
+        region,
+        income_bracket,
+        signup_date,
+        last_purchase_date,
+        customer_lifetime_days,
+        days_since_last_purchase,
+        total_orders,
+        total_spent_usd,
+        avg_order_value_usd,
+        preferred_payment_method,
+        device_type,
+        loyalty_tier,
+        discount_usage_rate,
+        return_rate,
+        newsletter_subscribed,
+        referral_source,
+        avg_session_duration_min,
+        avg_pages_per_session,
+        satisfaction_score,
+        churn,
+
+        -- Metadata
+        load_datetime,
+        record_source
+    from source
+)
+
+select * from staged
+  
+[0m13:14:14.920078 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:14:14.974215 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.054 seconds
+[0m13:14:14.991559 [debug] [Thread-1 (]: On model.dbt_datavault.stg_customers: ROLLBACK
+[0m13:14:14.992106 [debug] [Thread-1 (]: On model.dbt_datavault.stg_customers: Close
+[0m13:14:14.993656 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ff115ff1-eed6-4b92-b8bf-a52ef7df298c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa68597ad80>]}
+[0m13:14:14.994295 [info ] [Thread-1 (]: 1 of 8 OK created sql view model raw_vault.stg_customers ....................... [[32mCREATE VIEW[0m in 0.12s]
+[0m13:14:14.994961 [debug] [Thread-1 (]: Finished running node model.dbt_datavault.stg_customers
+[0m13:14:14.996020 [debug] [Thread-3 (]: Began running node model.dbt_datavault.hub_category
+[0m13:14:14.996368 [debug] [Thread-4 (]: Began running node model.dbt_datavault.hub_country
+[0m13:14:14.996721 [debug] [Thread-2 (]: Began running node model.dbt_datavault.hub_customer
+[0m13:14:14.997127 [info ] [Thread-3 (]: 2 of 8 START sql incremental model raw_vault.hub_category ...................... [RUN]
+[0m13:14:14.997500 [debug] [Thread-1 (]: Began running node model.dbt_datavault.link_customer_category
+[0m13:14:14.998015 [info ] [Thread-4 (]: 3 of 8 START sql incremental model raw_vault.hub_country ....................... [RUN]
+[0m13:14:14.998687 [info ] [Thread-2 (]: 4 of 8 START sql incremental model raw_vault.hub_customer ...................... [RUN]
+[0m13:14:14.999306 [debug] [Thread-3 (]: Acquiring new trino connection 'model.dbt_datavault.hub_category'
+[0m13:14:15.000151 [info ] [Thread-1 (]: 5 of 8 START sql incremental model raw_vault.link_customer_category ............ [RUN]
+[0m13:14:15.000844 [debug] [Thread-4 (]: Acquiring new trino connection 'model.dbt_datavault.hub_country'
+[0m13:14:15.001448 [debug] [Thread-2 (]: Acquiring new trino connection 'model.dbt_datavault.hub_customer'
+[0m13:14:15.002033 [debug] [Thread-3 (]: Began compiling node model.dbt_datavault.hub_category
+[0m13:14:15.002530 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_datavault.stg_customers, now model.dbt_datavault.link_customer_category)
+[0m13:14:15.003001 [debug] [Thread-4 (]: Began compiling node model.dbt_datavault.hub_country
+[0m13:14:15.003505 [debug] [Thread-2 (]: Began compiling node model.dbt_datavault.hub_customer
+[0m13:14:15.007968 [debug] [Thread-3 (]: Writing injected SQL for node "model.dbt_datavault.hub_category"
+[0m13:14:15.008568 [debug] [Thread-1 (]: Began compiling node model.dbt_datavault.link_customer_category
+[0m13:14:15.012872 [debug] [Thread-4 (]: Writing injected SQL for node "model.dbt_datavault.hub_country"
+[0m13:14:15.016381 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_datavault.hub_customer"
+[0m13:14:15.019978 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_datavault.link_customer_category"
+[0m13:14:15.024439 [debug] [Thread-3 (]: Began executing node model.dbt_datavault.hub_category
+[0m13:14:15.030319 [debug] [Thread-2 (]: Began executing node model.dbt_datavault.hub_customer
+[0m13:14:15.036103 [debug] [Thread-4 (]: Began executing node model.dbt_datavault.hub_country
+[0m13:14:15.036436 [debug] [Thread-1 (]: Began executing node model.dbt_datavault.link_customer_category
+[0m13:13:46.539437 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_datavault.hub_customer"
+[0m13:13:46.541905 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_datavault.link_customer_category"
+[0m13:13:46.554629 [debug] [Thread-4 (]: Writing runtime sql for node "model.dbt_datavault.hub_country"
+[0m13:13:46.549743 [debug] [Thread-3 (]: Writing runtime sql for node "model.dbt_datavault.hub_category"
+[0m13:13:46.560895 [debug] [Thread-4 (]: Using trino connection "model.dbt_datavault.hub_country"
+[0m13:13:46.562428 [debug] [Thread-1 (]: Using trino connection "model.dbt_datavault.link_customer_category"
+[0m13:13:46.564312 [debug] [Thread-2 (]: Using trino connection "model.dbt_datavault.hub_customer"
+[0m13:13:46.564743 [debug] [Thread-4 (]: On model.dbt_datavault.hub_country: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.hub_country"} */
+
+  
+    
+
+    create table "hive"."raw_vault"."hub_country"
+      
+      
+    as (
+      -- depends_on: "hive"."raw_vault"."stg_customers"
+
+
+
+with staged as (
+    select distinct
+        hk_country,
+        country,
+        load_datetime,
+        record_source
+    from "hive"."raw_vault"."stg_customers"
+)
+
+select
+    hk_country,
+    country,
+    load_datetime,
+    record_source
+from staged
+
+
+    )
+[0m13:13:46.565316 [debug] [Thread-1 (]: On model.dbt_datavault.link_customer_category: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.link_customer_category"} */
+
+  
+    
+
+    create table "hive"."raw_vault"."link_customer_category"
+      
+      
+    as (
+      -- depends_on: "hive"."raw_vault"."stg_customers"
+
+
+
+with staged as (
+    select distinct
+        hk_customer_category,
+        hk_customer,
+        hk_category,
+        load_datetime,
+        record_source
+    from "hive"."raw_vault"."stg_customers"
+)
+
+select * from staged
+
+
+    )
+[0m13:13:46.567344 [debug] [Thread-3 (]: Using trino connection "model.dbt_datavault.hub_category"
+[0m13:13:46.567773 [debug] [Thread-2 (]: On model.dbt_datavault.hub_customer: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.hub_customer"} */
+
+  
+    
+
+    create table "hive"."raw_vault"."hub_customer"
+      
+      
+    as (
+      -- depends_on: "hive"."raw_vault"."stg_customers"
+
+
+
+with staged as (
+    select distinct
+        hk_customer,
+        customer_id,
+        load_datetime,
+        record_source
+    from "hive"."raw_vault"."stg_customers"
+)
+
+select
+    hk_customer,
+    customer_id,
+    load_datetime,
+    record_source
+from staged
+
+
+    )
+[0m13:13:46.568336 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m13:13:46.568814 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:13:46.569376 [debug] [Thread-3 (]: On model.dbt_datavault.hub_category: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.hub_category"} */
+
+  
+    
+
+    create table "hive"."raw_vault"."hub_category"
+      
+      
+    as (
+      -- depends_on: "hive"."raw_vault"."stg_customers"
+
+
+
+with staged as (
+    select distinct
+        hk_category,
+        preferred_category,
+        load_datetime,
+        record_source
+    from "hive"."raw_vault"."stg_customers"
+)
+
+select
+    hk_category,
+    preferred_category,
+    load_datetime,
+    record_source
+from staged
+
+
+    )
+[0m13:13:46.569904 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m13:13:46.572304 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m13:14:15.561342 [debug] [Thread-4 (]: SQL status: CREATE TABLE (15 rows) in 0.400 seconds
+[0m13:14:15.570078 [debug] [Thread-4 (]: Applying DROP to: "hive"."raw_vault"."hub_country__dbt_tmp"
+[0m13:14:15.572420 [debug] [Thread-4 (]: Using trino connection "model.dbt_datavault.hub_country"
+[0m13:14:15.573279 [debug] [Thread-4 (]: On model.dbt_datavault.hub_country: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.hub_country"} */
+
+    drop view if exists "hive"."raw_vault"."hub_country__dbt_tmp"
+[0m13:14:15.574959 [debug] [Thread-2 (]: SQL status: CREATE TABLE (1_200 rows) in 0.413 seconds
+[0m13:14:15.575494 [debug] [Thread-3 (]: SQL status: CREATE TABLE (10 rows) in 0.411 seconds
+[0m13:14:15.578765 [debug] [Thread-2 (]: Applying DROP to: "hive"."raw_vault"."hub_customer__dbt_tmp"
+[0m13:14:15.582367 [debug] [Thread-3 (]: Applying DROP to: "hive"."raw_vault"."hub_category__dbt_tmp"
+[0m13:14:15.583953 [debug] [Thread-2 (]: Using trino connection "model.dbt_datavault.hub_customer"
+[0m13:14:15.584868 [debug] [Thread-3 (]: Using trino connection "model.dbt_datavault.hub_category"
+[0m13:14:15.586989 [debug] [Thread-1 (]: SQL status: CREATE TABLE (1_200 rows) in 0.426 seconds
+[0m13:14:15.587359 [debug] [Thread-2 (]: On model.dbt_datavault.hub_customer: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.hub_customer"} */
+
+    drop view if exists "hive"."raw_vault"."hub_customer__dbt_tmp"
+[0m13:14:15.588057 [debug] [Thread-3 (]: On model.dbt_datavault.hub_category: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.hub_category"} */
+
+    drop view if exists "hive"."raw_vault"."hub_category__dbt_tmp"
+[0m13:14:15.592147 [debug] [Thread-1 (]: Applying DROP to: "hive"."raw_vault"."link_customer_category__dbt_tmp"
+[0m13:14:15.593850 [debug] [Thread-4 (]: SQL status: DROP VIEW in 0.020 seconds
+[0m13:14:15.596170 [debug] [Thread-1 (]: Using trino connection "model.dbt_datavault.link_customer_category"
+[0m13:14:15.598896 [debug] [Thread-4 (]: On model.dbt_datavault.hub_country: ROLLBACK
+[0m13:14:15.601542 [debug] [Thread-1 (]: On model.dbt_datavault.link_customer_category: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.link_customer_category"} */
+
+    drop view if exists "hive"."raw_vault"."link_customer_category__dbt_tmp"
+[0m13:14:15.602551 [debug] [Thread-4 (]: On model.dbt_datavault.hub_country: Close
+[0m13:14:15.607233 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ff115ff1-eed6-4b92-b8bf-a52ef7df298c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa68607e360>]}
+[0m13:14:15.608572 [debug] [Thread-2 (]: SQL status: DROP VIEW in 0.016 seconds
+[0m13:14:15.610405 [debug] [Thread-2 (]: On model.dbt_datavault.hub_customer: ROLLBACK
+[0m13:14:15.610985 [debug] [Thread-3 (]: SQL status: DROP VIEW in 0.017 seconds
+[0m13:14:15.611296 [debug] [Thread-2 (]: On model.dbt_datavault.hub_customer: Close
+[0m13:14:15.608157 [info ] [Thread-4 (]: 3 of 8 OK created sql incremental model raw_vault.hub_country .................. [[32mCREATE TABLE (15 rows)[0m in 0.61s]
+[0m13:14:15.614718 [debug] [Thread-3 (]: On model.dbt_datavault.hub_category: ROLLBACK
+[0m13:14:15.616458 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ff115ff1-eed6-4b92-b8bf-a52ef7df298c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa684c50a10>]}
+[0m13:14:15.617018 [debug] [Thread-4 (]: Finished running node model.dbt_datavault.hub_country
+[0m13:14:15.617719 [debug] [Thread-3 (]: On model.dbt_datavault.hub_category: Close
+[0m13:14:15.619123 [info ] [Thread-2 (]: 4 of 8 OK created sql incremental model raw_vault.hub_customer ................. [[32mCREATE TABLE (1_200 rows)[0m in 0.62s]
+[0m13:14:15.619715 [debug] [Thread-4 (]: Began running node model.dbt_datavault.link_customer_country
+[0m13:14:15.620732 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ff115ff1-eed6-4b92-b8bf-a52ef7df298c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa684ca6330>]}
+[0m13:14:15.621343 [debug] [Thread-2 (]: Finished running node model.dbt_datavault.hub_customer
+[0m13:14:15.622178 [info ] [Thread-4 (]: 6 of 8 START sql incremental model raw_vault.link_customer_country ............. [RUN]
+[0m13:14:15.622858 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.019 seconds
+[0m13:14:15.623713 [info ] [Thread-3 (]: 2 of 8 OK created sql incremental model raw_vault.hub_category ................. [[32mCREATE TABLE (10 rows)[0m in 0.62s]
+[0m13:14:15.624350 [debug] [Thread-2 (]: Began running node model.dbt_datavault.sat_customer_details
+[0m13:14:15.624949 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.dbt_datavault.hub_country, now model.dbt_datavault.link_customer_country)
+[0m13:14:15.626819 [debug] [Thread-1 (]: On model.dbt_datavault.link_customer_category: ROLLBACK
+[0m13:14:15.627474 [debug] [Thread-3 (]: Finished running node model.dbt_datavault.hub_category
+[0m13:14:15.628066 [info ] [Thread-2 (]: 7 of 8 START sql incremental model raw_vault.sat_customer_details .............. [RUN]
+[0m13:14:15.628583 [debug] [Thread-4 (]: Began compiling node model.dbt_datavault.link_customer_country
+[0m13:14:15.629150 [debug] [Thread-1 (]: On model.dbt_datavault.link_customer_category: Close
+[0m13:14:15.629744 [debug] [Thread-3 (]: Began running node model.dbt_datavault.sat_customer_metrics
+[0m13:14:15.630352 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.dbt_datavault.hub_customer, now model.dbt_datavault.sat_customer_details)
+[0m13:14:15.634466 [debug] [Thread-4 (]: Writing injected SQL for node "model.dbt_datavault.link_customer_country"
+[0m13:14:15.635235 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ff115ff1-eed6-4b92-b8bf-a52ef7df298c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa6859791f0>]}
+[0m13:14:15.635636 [info ] [Thread-3 (]: 8 of 8 START sql incremental model raw_vault.sat_customer_metrics .............. [RUN]
+[0m13:14:15.636106 [debug] [Thread-2 (]: Began compiling node model.dbt_datavault.sat_customer_details
+[0m13:14:15.637040 [info ] [Thread-1 (]: 5 of 8 OK created sql incremental model raw_vault.link_customer_category ....... [[32mCREATE TABLE (1_200 rows)[0m in 0.63s]
+[0m13:14:15.637622 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.dbt_datavault.hub_category, now model.dbt_datavault.sat_customer_metrics)
+[0m13:14:15.641292 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_datavault.sat_customer_details"
+[0m13:14:15.641975 [debug] [Thread-1 (]: Finished running node model.dbt_datavault.link_customer_category
+[0m13:14:15.642414 [debug] [Thread-3 (]: Began compiling node model.dbt_datavault.sat_customer_metrics
+[0m13:14:15.646619 [debug] [Thread-3 (]: Writing injected SQL for node "model.dbt_datavault.sat_customer_metrics"
+[0m13:14:15.647779 [debug] [Thread-4 (]: Began executing node model.dbt_datavault.link_customer_country
+[0m13:14:15.651368 [debug] [Thread-4 (]: Writing runtime sql for node "model.dbt_datavault.link_customer_country"
+[0m13:14:15.652546 [debug] [Thread-3 (]: Began executing node model.dbt_datavault.sat_customer_metrics
+[0m13:14:15.656425 [debug] [Thread-3 (]: Writing runtime sql for node "model.dbt_datavault.sat_customer_metrics"
+[0m13:14:15.656965 [debug] [Thread-2 (]: Began executing node model.dbt_datavault.sat_customer_details
+[0m13:14:15.663057 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_datavault.sat_customer_details"
+[0m13:14:15.665319 [debug] [Thread-4 (]: Using trino connection "model.dbt_datavault.link_customer_country"
+[0m13:14:15.665841 [debug] [Thread-4 (]: On model.dbt_datavault.link_customer_country: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.link_customer_country"} */
+
+  
+    
+
+    create table "hive"."raw_vault"."link_customer_country"
+      
+      
+    as (
+      -- depends_on: "hive"."raw_vault"."stg_customers"
+
+
+
+with staged as (
+    select distinct
+        hk_customer_country,
+        hk_customer,
+        hk_country,
+        load_datetime,
+        record_source
+    from "hive"."raw_vault"."stg_customers"
+)
+
+select * from staged
+
+
+    )
+[0m13:14:15.666332 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m13:14:15.669409 [debug] [Thread-3 (]: Using trino connection "model.dbt_datavault.sat_customer_metrics"
+[0m13:14:15.671223 [debug] [Thread-2 (]: Using trino connection "model.dbt_datavault.sat_customer_details"
+[0m13:14:15.671612 [debug] [Thread-3 (]: On model.dbt_datavault.sat_customer_metrics: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.sat_customer_metrics"} */
+
+  
+    
+
+    create table "hive"."raw_vault"."sat_customer_metrics"
+      
+      
+    as (
+      -- depends_on: "hive"."raw_vault"."stg_customers"
+
+
+
+with staged as (
+    select
+        hk_customer,
+        hd_customer_metrics,
+        total_orders,
+        total_spent_usd,
+        avg_order_value_usd,
+        discount_usage_rate,
+        return_rate,
+        satisfaction_score,
+        customer_lifetime_days,
+        days_since_last_purchase,
+        avg_session_duration_min,
+        avg_pages_per_session,
+        churn,
+        load_datetime,
+        record_source
+    from "hive"."raw_vault"."stg_customers"
+)
+
+select * from staged s
+
+
+    )
+[0m13:14:15.672114 [debug] [Thread-2 (]: On model.dbt_datavault.sat_customer_details: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.sat_customer_details"} */
+
+  
+    
+
+    create table "hive"."raw_vault"."sat_customer_details"
+      
+      
+    as (
+      -- depends_on: "hive"."raw_vault"."stg_customers"
+
+
+
+with staged as (
+    select
+        hk_customer,
+        hd_customer_details,
+        age,
+        gender,
+        income_bracket,
+        loyalty_tier,
+        device_type,
+        preferred_payment_method,
+        newsletter_subscribed,
+        referral_source,
+        load_datetime,
+        record_source
+    from "hive"."raw_vault"."stg_customers"
+)
+
+select * from staged s
+
+
+    )
+[0m13:14:15.672648 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m13:14:15.673163 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m13:14:16.025706 [debug] [Thread-4 (]: SQL status: CREATE TABLE (1_200 rows) in 0.359 seconds
+[0m13:14:16.029199 [debug] [Thread-4 (]: Applying DROP to: "hive"."raw_vault"."link_customer_country__dbt_tmp"
+[0m13:14:16.030054 [debug] [Thread-4 (]: Using trino connection "model.dbt_datavault.link_customer_country"
+[0m13:14:16.030528 [debug] [Thread-4 (]: On model.dbt_datavault.link_customer_country: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.link_customer_country"} */
+
+    drop view if exists "hive"."raw_vault"."link_customer_country__dbt_tmp"
+[0m13:14:16.040287 [debug] [Thread-4 (]: SQL status: DROP VIEW in 0.009 seconds
+[0m13:14:16.042101 [debug] [Thread-4 (]: On model.dbt_datavault.link_customer_country: ROLLBACK
+[0m13:14:16.042551 [debug] [Thread-4 (]: On model.dbt_datavault.link_customer_country: Close
+[0m13:14:16.043263 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ff115ff1-eed6-4b92-b8bf-a52ef7df298c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa6895df830>]}
+[0m13:14:16.043900 [info ] [Thread-4 (]: 6 of 8 OK created sql incremental model raw_vault.link_customer_country ........ [[32mCREATE TABLE (1_200 rows)[0m in 0.42s]
+[0m13:14:16.044647 [debug] [Thread-4 (]: Finished running node model.dbt_datavault.link_customer_country
+[0m13:14:16.052132 [debug] [Thread-2 (]: SQL status: CREATE TABLE (1_200 rows) in 0.379 seconds
+[0m13:14:16.056244 [debug] [Thread-2 (]: Applying DROP to: "hive"."raw_vault"."sat_customer_details__dbt_tmp"
+[0m13:14:16.057348 [debug] [Thread-2 (]: Using trino connection "model.dbt_datavault.sat_customer_details"
+[0m13:14:16.057771 [debug] [Thread-3 (]: SQL status: CREATE TABLE (1_200 rows) in 0.385 seconds
+[0m13:14:16.058090 [debug] [Thread-2 (]: On model.dbt_datavault.sat_customer_details: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.sat_customer_details"} */
+
+    drop view if exists "hive"."raw_vault"."sat_customer_details__dbt_tmp"
+[0m13:14:16.061364 [debug] [Thread-3 (]: Applying DROP to: "hive"."raw_vault"."sat_customer_metrics__dbt_tmp"
+[0m13:14:16.063535 [debug] [Thread-3 (]: Using trino connection "model.dbt_datavault.sat_customer_metrics"
+[0m13:14:16.064126 [debug] [Thread-3 (]: On model.dbt_datavault.sat_customer_metrics: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.sat_customer_metrics"} */
+
+    drop view if exists "hive"."raw_vault"."sat_customer_metrics__dbt_tmp"
+[0m13:14:16.073740 [debug] [Thread-2 (]: SQL status: DROP VIEW in 0.012 seconds
+[0m13:14:16.074125 [debug] [Thread-3 (]: SQL status: DROP VIEW in 0.009 seconds
+[0m13:14:16.075622 [debug] [Thread-2 (]: On model.dbt_datavault.sat_customer_details: ROLLBACK
+[0m13:14:16.077601 [debug] [Thread-3 (]: On model.dbt_datavault.sat_customer_metrics: ROLLBACK
+[0m13:14:16.078139 [debug] [Thread-2 (]: On model.dbt_datavault.sat_customer_details: Close
+[0m13:14:16.078769 [debug] [Thread-3 (]: On model.dbt_datavault.sat_customer_metrics: Close
+[0m13:14:16.079585 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ff115ff1-eed6-4b92-b8bf-a52ef7df298c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa684cc5160>]}
+[0m13:14:16.080056 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ff115ff1-eed6-4b92-b8bf-a52ef7df298c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa684d34c20>]}
+[0m13:14:16.080588 [info ] [Thread-2 (]: 7 of 8 OK created sql incremental model raw_vault.sat_customer_details ......... [[32mCREATE TABLE (1_200 rows)[0m in 0.45s]
+[0m13:14:16.081223 [info ] [Thread-3 (]: 8 of 8 OK created sql incremental model raw_vault.sat_customer_metrics ......... [[32mCREATE TABLE (1_200 rows)[0m in 0.44s]
+[0m13:14:16.081878 [debug] [Thread-2 (]: Finished running node model.dbt_datavault.sat_customer_details
+[0m13:14:16.082521 [debug] [Thread-3 (]: Finished running node model.dbt_datavault.sat_customer_metrics
+[0m13:14:16.084809 [debug] [MainThread]: On master: COMMIT
+[0m13:14:16.085428 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:14:16.085775 [debug] [MainThread]: Connection 'model.dbt_datavault.link_customer_category' was properly closed.
+[0m13:14:16.086106 [debug] [MainThread]: Connection 'model.dbt_datavault.sat_customer_metrics' was properly closed.
+[0m13:14:16.086443 [debug] [MainThread]: Connection 'model.dbt_datavault.link_customer_country' was properly closed.
+[0m13:14:16.086827 [debug] [MainThread]: Connection 'model.dbt_datavault.sat_customer_details' was properly closed.
+[0m13:14:16.087388 [info ] [MainThread]: 
+[0m13:14:16.087925 [info ] [MainThread]: Finished running 7 incremental models, 1 view model in 0 hours 0 minutes and 1.39 seconds (1.39s).
+[0m13:14:16.089261 [debug] [MainThread]: Command end result
+[0m13:14:16.136792 [debug] [MainThread]: Wrote artifact WritableManifest to /workspace/dbt_datavault/target/manifest.json
+[0m13:14:16.141133 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspace/dbt_datavault/target/semantic_manifest.json
+[0m13:14:16.149127 [debug] [MainThread]: Wrote artifact RunExecutionResult to /workspace/dbt_datavault/target/run_results.json
+[0m13:14:16.149521 [info ] [MainThread]: 
+[0m13:14:16.149992 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:14:16.150512 [info ] [MainThread]: 
+[0m13:14:16.151043 [info ] [MainThread]: Done. PASS=8 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=8
+[0m13:14:16.152011 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 2.7593806, "process_in_blocks": "0", "process_kernel_time": 0.300873, "process_mem_max_rss": "138900", "process_out_blocks": "0", "process_user_time": 3.770951}
+[0m13:14:16.152542 [debug] [MainThread]: Command `dbt run` succeeded at 13:14:16.152454 after 2.76 seconds
+[0m13:14:16.153071 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa6864b2e40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa685d4ec60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa685771af0>]}
+[0m13:14:16.153562 [debug] [MainThread]: Flushing usage events
+[0m13:14:16.933406 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:14:28.667541 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc65b2978c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc65b19c6b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc65928d340>]}
+
+
+============================== 13:14:28.700630 | b122f475-ee33-4429-a9e3-653f045e998c ==============================
+[0m13:14:28.700630 [info ] [MainThread]: Running with dbt=1.11.11
+[0m13:14:28.701481 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'write_json': 'True', 'log_path': '/workspace/dbt_datavault/logs', 'target_path': 'None', 'no_print': 'None', 'printer_width': '80', 'use_experimental_parser': 'False', 'quiet': 'False', 'partial_parse': 'True', 'log_format': 'default', 'log_cache_events': 'False', 'static_parser': 'True', 'warn_error': 'None', 'profiles_dir': '.', 'introspect': 'True', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'use_colors': 'True', 'debug': 'False', 'invocation_command': 'dbt run --profiles-dir .', 'fail_fast': 'False', 'empty': 'False'}
+[0m13:14:28.893047 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b122f475-ee33-4429-a9e3-653f045e998c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc658964470>]}
+[0m13:14:28.958699 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b122f475-ee33-4429-a9e3-653f045e998c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc659b3dfd0>]}
+[0m13:14:28.959426 [info ] [MainThread]: Registered adapter: trino=1.10.2
+[0m13:14:29.023989 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m13:14:29.239758 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m13:14:29.240263 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m13:14:29.240663 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m13:14:29.275368 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b122f475-ee33-4429-a9e3-653f045e998c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc65788f0b0>]}
+[0m13:14:29.360976 [debug] [MainThread]: Wrote artifact WritableManifest to /workspace/dbt_datavault/target/manifest.json
+[0m13:14:29.365076 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspace/dbt_datavault/target/semantic_manifest.json
+[0m13:14:29.394429 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b122f475-ee33-4429-a9e3-653f045e998c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc657715e80>]}
+[0m13:14:29.395133 [info ] [MainThread]: Found 8 models, 12 data tests, 495 macros
+[0m13:14:29.395616 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b122f475-ee33-4429-a9e3-653f045e998c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc657715e50>]}
+[0m13:14:29.397658 [info ] [MainThread]: 
+[0m13:14:29.398079 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m13:14:29.398506 [info ] [MainThread]: 
+[0m13:14:29.399321 [debug] [MainThread]: Acquiring new trino connection 'master'
+[0m13:14:29.404851 [debug] [ThreadPool]: Acquiring new trino connection 'list_hive'
+[0m13:14:29.449650 [debug] [ThreadPool]: Using trino connection "list_hive"
+[0m13:14:29.450186 [debug] [ThreadPool]: On list_hive: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "connection_name": "list_hive"} */
+
+    select schema_name
+    from "hive".INFORMATION_SCHEMA.schemata
+[0m13:14:29.450549 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:14:29.450861 [warn ] [ThreadPool]: [[33mWARNING[0m]: SSL certificate validation is disabled by default. It is legacy behavior which will be changed in future releases. It is strongly advised to enable `require_certificate_validation` flag or explicitly set `cert` configuration to `True` for security reasons. You may receive an error after that if your SSL setup is incorrect.
+You may opt into the new behavior sooner by setting `flags.require_certificate_validation` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m13:14:29.451362 [debug] [ThreadPool]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': 'b122f475-ee33-4429-a9e3-653f045e998c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc6575311c0>]}
+[0m13:14:29.479778 [debug] [ThreadPool]: SQL status: SUCCESS in 0.029 seconds
+[0m13:14:29.481175 [debug] [ThreadPool]: On list_hive: Close
+[0m13:14:29.482953 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_hive, now list_hive_raw_vault)
+[0m13:14:29.496346 [debug] [ThreadPool]: Using trino connection "list_hive_raw_vault"
+[0m13:14:29.496963 [debug] [ThreadPool]: On list_hive_raw_vault: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "connection_name": "list_hive_raw_vault"} */
+select
+      t.table_catalog as database,
+      t.table_name as name,
+      t.table_schema as schema,
+      case when mv.name is not null then 'materialized_view'
+           when t.table_type = 'BASE TABLE' then 'table'
+           when t.table_type = 'VIEW' then 'view'
+           else t.table_type
+      end as table_type
+    from "hive".INFORMATION_SCHEMA.tables t
+    left join (
+            select * from system.metadata.materialized_views
+            where catalog_name = 'hive'
+              and schema_name = 'raw_vault') mv
+          on mv.catalog_name = t.table_catalog and mv.schema_name = t.table_schema and mv.name = t.table_name
+    where t.table_schema = 'raw_vault'
+[0m13:14:29.497845 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:14:29.559873 [debug] [ThreadPool]: SQL status: SUCCESS in 0.062 seconds
+[0m13:14:29.561567 [debug] [ThreadPool]: On list_hive_raw_vault: ROLLBACK
+[0m13:14:29.562089 [debug] [ThreadPool]: On list_hive_raw_vault: Close
+[0m13:14:29.564010 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b122f475-ee33-4429-a9e3-653f045e998c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc658756960>]}
+[0m13:14:29.564661 [debug] [MainThread]: On master: COMMIT
+[0m13:14:29.569692 [debug] [Thread-1 (]: Began running node model.dbt_datavault.stg_customers
+[0m13:14:29.570359 [info ] [Thread-1 (]: 1 of 8 START sql view model raw_vault.stg_customers ............................ [RUN]
+[0m13:14:29.570901 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_hive_raw_vault, now model.dbt_datavault.stg_customers)
+[0m13:14:29.571510 [debug] [Thread-1 (]: Began compiling node model.dbt_datavault.stg_customers
+[0m13:14:29.574842 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_datavault.stg_customers"
+[0m13:14:29.582646 [debug] [Thread-1 (]: Began executing node model.dbt_datavault.stg_customers
+[0m13:14:29.606148 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_datavault.stg_customers"
+[0m13:14:29.624242 [debug] [Thread-1 (]: Using trino connection "model.dbt_datavault.stg_customers"
+[0m13:14:29.625040 [debug] [Thread-1 (]: On model.dbt_datavault.stg_customers: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.stg_customers"} */
+
+  create or replace view
+    "hive"."raw_vault"."stg_customers"
+  security definer
+  as
+    
+
+with source as (
+    select * from hive.raw_vault.raw_customers
+),
+
+staged as (
+    select
+        -- Business Keys
+        customer_id,
+        country,
+        preferred_category,
+
+        -- Hash Keys (Data Vault pattern)
+        cast(to_hex(sha256(cast(customer_id as varbinary))) as varchar) as hk_customer,
+        cast(to_hex(sha256(cast(country as varbinary))) as varchar) as hk_country,
+        cast(to_hex(sha256(cast(preferred_category as varbinary))) as varchar) as hk_category,
+        cast(to_hex(sha256(cast(concat(customer_id, '||', country) as varbinary))) as varchar) as hk_customer_country,
+        cast(to_hex(sha256(cast(concat(customer_id, '||', preferred_category) as varbinary))) as varchar) as hk_customer_category,
+
+        -- Hash Diff (detectar mudanças nos satellites)
+        cast(to_hex(sha256(cast(concat(
+            coalesce(cast(age as varchar), ''),
+            coalesce(gender, ''),
+            coalesce(income_bracket, ''),
+            coalesce(loyalty_tier, ''),
+            coalesce(device_type, ''),
+            coalesce(preferred_payment_method, '')
+        ) as varbinary))) as varchar) as hd_customer_details,
+
+        cast(to_hex(sha256(cast(concat(
+            coalesce(cast(total_orders as varchar), ''),
+            coalesce(cast(total_spent_usd as varchar), ''),
+            coalesce(cast(avg_order_value_usd as varchar), ''),
+            coalesce(cast(discount_usage_rate as varchar), ''),
+            coalesce(cast(return_rate as varchar), ''),
+            coalesce(cast(satisfaction_score as varchar), '')
+        ) as varbinary))) as varchar) as hd_customer_metrics,
+
+        -- Attributes
+        age,
+        gender,
+        region,
+        income_bracket,
+        signup_date,
+        last_purchase_date,
+        customer_lifetime_days,
+        days_since_last_purchase,
+        total_orders,
+        total_spent_usd,
+        avg_order_value_usd,
+        preferred_payment_method,
+        device_type,
+        loyalty_tier,
+        discount_usage_rate,
+        return_rate,
+        newsletter_subscribed,
+        referral_source,
+        avg_session_duration_min,
+        avg_pages_per_session,
+        satisfaction_score,
+        churn,
+
+        -- Metadata
+        load_datetime,
+        record_source
+    from source
+)
+
+select * from staged
+  
+[0m13:14:29.625701 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:14:29.687156 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.061 seconds
+[0m13:14:29.705580 [debug] [Thread-1 (]: On model.dbt_datavault.stg_customers: ROLLBACK
+[0m13:14:29.706119 [debug] [Thread-1 (]: On model.dbt_datavault.stg_customers: Close
+[0m13:14:29.707633 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b122f475-ee33-4429-a9e3-653f045e998c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc657f0b470>]}
+[0m13:14:29.708275 [info ] [Thread-1 (]: 1 of 8 OK created sql view model raw_vault.stg_customers ....................... [[32mCREATE VIEW[0m in 0.14s]
+[0m13:14:29.709037 [debug] [Thread-1 (]: Finished running node model.dbt_datavault.stg_customers
+[0m13:14:29.710276 [debug] [Thread-3 (]: Began running node model.dbt_datavault.hub_category
+[0m13:14:29.710691 [debug] [Thread-4 (]: Began running node model.dbt_datavault.hub_country
+[0m13:14:29.711055 [debug] [Thread-2 (]: Began running node model.dbt_datavault.hub_customer
+[0m13:14:29.712048 [debug] [Thread-1 (]: Began running node model.dbt_datavault.link_customer_category
+[0m13:14:29.711598 [info ] [Thread-3 (]: 2 of 8 START sql incremental model raw_vault.hub_category ...................... [RUN]
+[0m13:14:29.712693 [info ] [Thread-4 (]: 3 of 8 START sql incremental model raw_vault.hub_country ....................... [RUN]
+[0m13:14:29.713439 [info ] [Thread-2 (]: 4 of 8 START sql incremental model raw_vault.hub_customer ...................... [RUN]
+[0m13:14:29.714084 [info ] [Thread-1 (]: 5 of 8 START sql incremental model raw_vault.link_customer_category ............ [RUN]
+[0m13:14:29.714817 [debug] [Thread-3 (]: Acquiring new trino connection 'model.dbt_datavault.hub_category'
+[0m13:14:29.715534 [debug] [Thread-4 (]: Acquiring new trino connection 'model.dbt_datavault.hub_country'
+[0m13:14:29.716171 [debug] [Thread-2 (]: Acquiring new trino connection 'model.dbt_datavault.hub_customer'
+[0m13:14:29.716673 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_datavault.stg_customers, now model.dbt_datavault.link_customer_category)
+[0m13:14:29.717167 [debug] [Thread-3 (]: Began compiling node model.dbt_datavault.hub_category
+[0m13:14:29.717635 [debug] [Thread-4 (]: Began compiling node model.dbt_datavault.hub_country
+[0m13:14:29.718087 [debug] [Thread-2 (]: Began compiling node model.dbt_datavault.hub_customer
+[0m13:14:29.718513 [debug] [Thread-1 (]: Began compiling node model.dbt_datavault.link_customer_category
+[0m13:14:29.727467 [debug] [Thread-3 (]: Writing injected SQL for node "model.dbt_datavault.hub_category"
+[0m13:14:29.731354 [debug] [Thread-4 (]: Writing injected SQL for node "model.dbt_datavault.hub_country"
+[0m13:14:29.737981 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_datavault.hub_customer"
+[0m13:14:29.742047 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_datavault.link_customer_category"
+[0m13:14:29.747051 [debug] [Thread-2 (]: Began executing node model.dbt_datavault.hub_customer
+[0m13:14:29.747408 [debug] [Thread-4 (]: Began executing node model.dbt_datavault.hub_country
+[0m13:14:29.752862 [debug] [Thread-1 (]: Began executing node model.dbt_datavault.link_customer_category
+[0m13:14:29.774151 [debug] [Thread-3 (]: Began executing node model.dbt_datavault.hub_category
+[0m13:14:29.794060 [debug] [Thread-2 (]: Using trino connection "model.dbt_datavault.hub_customer"
+[0m13:14:29.795906 [debug] [Thread-4 (]: Using trino connection "model.dbt_datavault.hub_country"
+[0m13:14:29.800722 [debug] [Thread-1 (]: Using trino connection "model.dbt_datavault.link_customer_category"
+[0m13:14:29.805580 [debug] [Thread-3 (]: Using trino connection "model.dbt_datavault.hub_category"
+[0m13:14:29.806162 [debug] [Thread-2 (]: On model.dbt_datavault.hub_customer: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.hub_customer"} */
+
+  create or replace view
+    "hive"."raw_vault"."hub_customer__dbt_tmp"
+  security definer
+  as
+    -- depends_on: "hive"."raw_vault"."stg_customers"
+
+
+
+with staged as (
+    select distinct
+        hk_customer,
+        customer_id,
+        load_datetime,
+        record_source
+    from "hive"."raw_vault"."stg_customers"
+)
+
+select
+    hk_customer,
+    customer_id,
+    load_datetime,
+    record_source
+from staged
+
+
+where hk_customer not in (select hk_customer from "hive"."raw_vault"."hub_customer")
+
+  
+[0m13:14:29.806626 [debug] [Thread-4 (]: On model.dbt_datavault.hub_country: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.hub_country"} */
+
+  create or replace view
+    "hive"."raw_vault"."hub_country__dbt_tmp"
+  security definer
+  as
+    -- depends_on: "hive"."raw_vault"."stg_customers"
+
+
+
+with staged as (
+    select distinct
+        hk_country,
+        country,
+        load_datetime,
+        record_source
+    from "hive"."raw_vault"."stg_customers"
+)
+
+select
+    hk_country,
+    country,
+    load_datetime,
+    record_source
+from staged
+
+
+where hk_country not in (select hk_country from "hive"."raw_vault"."hub_country")
+
+  
+[0m13:14:29.807094 [debug] [Thread-1 (]: On model.dbt_datavault.link_customer_category: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.link_customer_category"} */
+
+  create or replace view
+    "hive"."raw_vault"."link_customer_category__dbt_tmp"
+  security definer
+  as
+    -- depends_on: "hive"."raw_vault"."stg_customers"
+
+
+
+with staged as (
+    select distinct
+        hk_customer_category,
+        hk_customer,
+        hk_category,
+        load_datetime,
+        record_source
+    from "hive"."raw_vault"."stg_customers"
+)
+
+select * from staged
+
+
+where hk_customer_category not in (select hk_customer_category from "hive"."raw_vault"."link_customer_category")
+
+  
+[0m13:14:29.807539 [debug] [Thread-3 (]: On model.dbt_datavault.hub_category: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.hub_category"} */
+
+  create or replace view
+    "hive"."raw_vault"."hub_category__dbt_tmp"
+  security definer
+  as
+    -- depends_on: "hive"."raw_vault"."stg_customers"
+
+
+
+with staged as (
+    select distinct
+        hk_category,
+        preferred_category,
+        load_datetime,
+        record_source
+    from "hive"."raw_vault"."stg_customers"
+)
+
+select
+    hk_category,
+    preferred_category,
+    load_datetime,
+    record_source
+from staged
+
+
+where hk_category not in (select hk_category from "hive"."raw_vault"."hub_category")
+
+  
+[0m13:14:29.808039 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m13:14:29.808461 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m13:14:29.808895 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:14:29.809298 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m13:14:29.895309 [debug] [Thread-3 (]: SQL status: CREATE VIEW in 0.086 seconds
+[0m13:14:29.907662 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.099 seconds
+[0m13:14:29.910648 [debug] [Thread-3 (]: Using trino connection "model.dbt_datavault.hub_category"
+[0m13:14:29.981765 [debug] [Thread-4 (]: SQL status: CREATE VIEW in 0.173 seconds
+[0m13:14:29.984384 [debug] [Thread-1 (]: Using trino connection "model.dbt_datavault.link_customer_category"
+[0m13:14:29.984858 [debug] [Thread-2 (]: SQL status: CREATE VIEW in 0.177 seconds
+[0m13:14:29.985174 [debug] [Thread-3 (]: On model.dbt_datavault.hub_category: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.hub_category"} */
+
+    select column_name, data_type
+    from "hive".INFORMATION_SCHEMA.columns
+    where
+      table_catalog = 'hive'
+      and table_schema = 'raw_vault'
+      and table_name = 'hub_category__dbt_tmp'
+[0m13:14:29.988540 [debug] [Thread-4 (]: Using trino connection "model.dbt_datavault.hub_country"
+[0m13:14:29.989043 [debug] [Thread-1 (]: On model.dbt_datavault.link_customer_category: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.link_customer_category"} */
+
+    select column_name, data_type
+    from "hive".INFORMATION_SCHEMA.columns
+    where
+      table_catalog = 'hive'
+      and table_schema = 'raw_vault'
+      and table_name = 'link_customer_category__dbt_tmp'
+[0m13:14:29.992367 [debug] [Thread-2 (]: Using trino connection "model.dbt_datavault.hub_customer"
+[0m13:14:29.993809 [debug] [Thread-4 (]: On model.dbt_datavault.hub_country: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.hub_country"} */
+
+    select column_name, data_type
+    from "hive".INFORMATION_SCHEMA.columns
+    where
+      table_catalog = 'hive'
+      and table_schema = 'raw_vault'
+      and table_name = 'hub_country__dbt_tmp'
+[0m13:14:29.996071 [debug] [Thread-2 (]: On model.dbt_datavault.hub_customer: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.hub_customer"} */
+
+    select column_name, data_type
+    from "hive".INFORMATION_SCHEMA.columns
+    where
+      table_catalog = 'hive'
+      and table_schema = 'raw_vault'
+      and table_name = 'hub_customer__dbt_tmp'
+[0m13:14:30.043704 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.049 seconds
+[0m13:14:30.048734 [debug] [Thread-1 (]: Using trino connection "model.dbt_datavault.link_customer_category"
+[0m13:14:30.049316 [debug] [Thread-2 (]: SQL status: SUCCESS in 0.051 seconds
+[0m13:14:30.049713 [debug] [Thread-3 (]: SQL status: SUCCESS in 0.057 seconds
+[0m13:14:30.050035 [debug] [Thread-1 (]: On model.dbt_datavault.link_customer_category: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.link_customer_category"} */
+
+    select column_name, data_type
+    from "hive".INFORMATION_SCHEMA.columns
+    where
+      table_catalog = 'hive'
+      and table_schema = 'raw_vault'
+      and table_name = 'link_customer_category'
+[0m13:14:30.050725 [debug] [Thread-4 (]: SQL status: SUCCESS in 0.054 seconds
+[0m13:14:30.054538 [debug] [Thread-2 (]: Using trino connection "model.dbt_datavault.hub_customer"
+[0m13:14:30.058101 [debug] [Thread-3 (]: Using trino connection "model.dbt_datavault.hub_category"
+[0m13:14:30.063681 [debug] [Thread-4 (]: Using trino connection "model.dbt_datavault.hub_country"
+[0m13:14:30.065292 [debug] [Thread-2 (]: On model.dbt_datavault.hub_customer: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.hub_customer"} */
+
+    select column_name, data_type
+    from "hive".INFORMATION_SCHEMA.columns
+    where
+      table_catalog = 'hive'
+      and table_schema = 'raw_vault'
+      and table_name = 'hub_customer'
+[0m13:14:30.065905 [debug] [Thread-3 (]: On model.dbt_datavault.hub_category: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.hub_category"} */
+
+    select column_name, data_type
+    from "hive".INFORMATION_SCHEMA.columns
+    where
+      table_catalog = 'hive'
+      and table_schema = 'raw_vault'
+      and table_name = 'hub_category'
+[0m13:14:30.066347 [debug] [Thread-4 (]: On model.dbt_datavault.hub_country: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.hub_country"} */
+
+    select column_name, data_type
+    from "hive".INFORMATION_SCHEMA.columns
+    where
+      table_catalog = 'hive'
+      and table_schema = 'raw_vault'
+      and table_name = 'hub_country'
+[0m13:14:30.103601 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.045 seconds
+[0m13:14:30.105722 [debug] [Thread-3 (]: SQL status: SUCCESS in 0.037 seconds
+[0m13:14:30.116933 [debug] [Thread-1 (]: Using trino connection "model.dbt_datavault.link_customer_category"
+[0m13:14:30.122245 [debug] [Thread-3 (]: Using trino connection "model.dbt_datavault.hub_category"
+[0m13:14:30.122795 [debug] [Thread-4 (]: SQL status: SUCCESS in 0.053 seconds
+[0m13:14:30.123665 [debug] [Thread-1 (]: On model.dbt_datavault.link_customer_category: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.link_customer_category"} */
+
+    select column_name, data_type
+    from "hive".INFORMATION_SCHEMA.columns
+    where
+      table_catalog = 'hive'
+      and table_schema = 'raw_vault'
+      and table_name = 'link_customer_category'
+[0m13:14:30.124088 [debug] [Thread-2 (]: SQL status: SUCCESS in 0.057 seconds
+[0m13:14:30.124568 [debug] [Thread-3 (]: On model.dbt_datavault.hub_category: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.hub_category"} */
+
+    select column_name, data_type
+    from "hive".INFORMATION_SCHEMA.columns
+    where
+      table_catalog = 'hive'
+      and table_schema = 'raw_vault'
+      and table_name = 'hub_category'
+[0m13:14:30.128285 [debug] [Thread-4 (]: Using trino connection "model.dbt_datavault.hub_country"
+[0m13:14:30.132998 [debug] [Thread-2 (]: Using trino connection "model.dbt_datavault.hub_customer"
+[0m13:14:30.135121 [debug] [Thread-4 (]: On model.dbt_datavault.hub_country: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.hub_country"} */
+
+    select column_name, data_type
+    from "hive".INFORMATION_SCHEMA.columns
+    where
+      table_catalog = 'hive'
+      and table_schema = 'raw_vault'
+      and table_name = 'hub_country'
+[0m13:14:30.135893 [debug] [Thread-2 (]: On model.dbt_datavault.hub_customer: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.hub_customer"} */
+
+    select column_name, data_type
+    from "hive".INFORMATION_SCHEMA.columns
+    where
+      table_catalog = 'hive'
+      and table_schema = 'raw_vault'
+      and table_name = 'hub_customer'
+[0m13:14:30.164459 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.036 seconds
+[0m13:14:30.164981 [debug] [Thread-3 (]: SQL status: SUCCESS in 0.031 seconds
+[0m13:14:30.174102 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_datavault.link_customer_category"
+[0m13:14:30.179163 [debug] [Thread-3 (]: Writing runtime sql for node "model.dbt_datavault.hub_category"
+[0m13:14:30.180461 [debug] [Thread-4 (]: SQL status: SUCCESS in 0.043 seconds
+[0m13:14:30.180901 [debug] [Thread-2 (]: SQL status: SUCCESS in 0.042 seconds
+[0m13:14:30.182668 [debug] [Thread-4 (]: Writing runtime sql for node "model.dbt_datavault.hub_country"
+[0m13:14:30.184320 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_datavault.hub_customer"
+[0m13:14:30.187934 [debug] [Thread-3 (]: Using trino connection "model.dbt_datavault.hub_category"
+[0m13:14:30.189067 [debug] [Thread-1 (]: Using trino connection "model.dbt_datavault.link_customer_category"
+[0m13:14:30.189524 [debug] [Thread-3 (]: On model.dbt_datavault.hub_category: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.hub_category"} */
+insert into "hive"."raw_vault"."hub_category" ("hk_category", "preferred_category", "load_datetime", "record_source")
+    (
+        select "hk_category", "preferred_category", "load_datetime", "record_source"
+        from "hive"."raw_vault"."hub_category__dbt_tmp"
+    )
+[0m13:14:30.190574 [debug] [Thread-2 (]: Using trino connection "model.dbt_datavault.hub_customer"
+[0m13:14:30.191011 [debug] [Thread-1 (]: On model.dbt_datavault.link_customer_category: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.link_customer_category"} */
+insert into "hive"."raw_vault"."link_customer_category" ("hk_customer_category", "hk_customer", "hk_category", "load_datetime", "record_source")
+    (
+        select "hk_customer_category", "hk_customer", "hk_category", "load_datetime", "record_source"
+        from "hive"."raw_vault"."link_customer_category__dbt_tmp"
+    )
+[0m13:14:30.193820 [debug] [Thread-4 (]: Using trino connection "model.dbt_datavault.hub_country"
+[0m13:14:30.194205 [debug] [Thread-2 (]: On model.dbt_datavault.hub_customer: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.hub_customer"} */
+insert into "hive"."raw_vault"."hub_customer" ("hk_customer", "customer_id", "load_datetime", "record_source")
+    (
+        select "hk_customer", "customer_id", "load_datetime", "record_source"
+        from "hive"."raw_vault"."hub_customer__dbt_tmp"
+    )
+[0m13:14:30.196874 [debug] [Thread-4 (]: On model.dbt_datavault.hub_country: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.hub_country"} */
+insert into "hive"."raw_vault"."hub_country" ("hk_country", "country", "load_datetime", "record_source")
+    (
+        select "hk_country", "country", "load_datetime", "record_source"
+        from "hive"."raw_vault"."hub_country__dbt_tmp"
+    )
+[0m13:14:30.526566 [debug] [Thread-2 (]: SQL status: INSERT (0 rows) in 0.328 seconds
+[0m13:14:30.529021 [debug] [Thread-1 (]: SQL status: INSERT (0 rows) in 0.334 seconds
+[0m13:14:30.537471 [debug] [Thread-2 (]: Applying DROP to: "hive"."raw_vault"."hub_customer__dbt_tmp"
+[0m13:14:30.541055 [debug] [Thread-1 (]: Applying DROP to: "hive"."raw_vault"."link_customer_category__dbt_tmp"
+[0m13:14:30.541598 [debug] [Thread-4 (]: SQL status: INSERT (0 rows) in 0.342 seconds
+[0m13:14:30.542572 [debug] [Thread-3 (]: SQL status: INSERT (0 rows) in 0.351 seconds
+[0m13:14:30.544779 [debug] [Thread-2 (]: Using trino connection "model.dbt_datavault.hub_customer"
+[0m13:14:30.545856 [debug] [Thread-1 (]: Using trino connection "model.dbt_datavault.link_customer_category"
+[0m13:14:30.549392 [debug] [Thread-4 (]: Applying DROP to: "hive"."raw_vault"."hub_country__dbt_tmp"
+[0m13:14:30.552683 [debug] [Thread-3 (]: Applying DROP to: "hive"."raw_vault"."hub_category__dbt_tmp"
+[0m13:14:30.553319 [debug] [Thread-2 (]: On model.dbt_datavault.hub_customer: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.hub_customer"} */
+
+    drop view if exists "hive"."raw_vault"."hub_customer__dbt_tmp"
+[0m13:14:30.553911 [debug] [Thread-1 (]: On model.dbt_datavault.link_customer_category: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.link_customer_category"} */
+
+    drop view if exists "hive"."raw_vault"."link_customer_category__dbt_tmp"
+[0m13:14:30.554845 [debug] [Thread-4 (]: Using trino connection "model.dbt_datavault.hub_country"
+[0m13:14:30.555797 [debug] [Thread-3 (]: Using trino connection "model.dbt_datavault.hub_category"
+[0m13:14:30.558203 [debug] [Thread-4 (]: On model.dbt_datavault.hub_country: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.hub_country"} */
+
+    drop view if exists "hive"."raw_vault"."hub_country__dbt_tmp"
+[0m13:14:30.560058 [debug] [Thread-3 (]: On model.dbt_datavault.hub_category: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.hub_category"} */
+
+    drop view if exists "hive"."raw_vault"."hub_category__dbt_tmp"
+[0m13:14:30.604043 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.047 seconds
+[0m13:14:30.606429 [debug] [Thread-1 (]: On model.dbt_datavault.link_customer_category: ROLLBACK
+[0m13:14:30.606956 [debug] [Thread-2 (]: SQL status: DROP VIEW in 0.051 seconds
+[0m13:14:30.607329 [debug] [Thread-1 (]: On model.dbt_datavault.link_customer_category: Close
+[0m13:14:30.608132 [debug] [Thread-4 (]: SQL status: DROP VIEW in 0.046 seconds
+[0m13:14:30.610082 [debug] [Thread-2 (]: On model.dbt_datavault.hub_customer: ROLLBACK
+[0m13:14:30.610816 [debug] [Thread-3 (]: SQL status: DROP VIEW in 0.047 seconds
+[0m13:14:30.611503 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b122f475-ee33-4429-a9e3-653f045e998c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc65b29c500>]}
+[0m13:14:30.613091 [debug] [Thread-4 (]: On model.dbt_datavault.hub_country: ROLLBACK
+[0m13:14:30.613646 [debug] [Thread-2 (]: On model.dbt_datavault.hub_customer: Close
+[0m13:14:30.615437 [debug] [Thread-3 (]: On model.dbt_datavault.hub_category: ROLLBACK
+[0m13:14:30.616217 [info ] [Thread-1 (]: 5 of 8 OK created sql incremental model raw_vault.link_customer_category ....... [[32mINSERT (0 rows)[0m in 0.89s]
+[0m13:14:30.616798 [debug] [Thread-4 (]: On model.dbt_datavault.hub_country: Close
+[0m13:14:30.617717 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b122f475-ee33-4429-a9e3-653f045e998c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc656ab87a0>]}
+[0m13:14:30.618090 [debug] [Thread-3 (]: On model.dbt_datavault.hub_category: Close
+[0m13:14:30.618746 [debug] [Thread-1 (]: Finished running node model.dbt_datavault.link_customer_category
+[0m13:14:30.619470 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b122f475-ee33-4429-a9e3-653f045e998c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc65412ef00>]}
+[0m13:14:30.620078 [info ] [Thread-2 (]: 4 of 8 OK created sql incremental model raw_vault.hub_customer ................. [[32mINSERT (0 rows)[0m in 0.90s]
+[0m13:14:30.620742 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b122f475-ee33-4429-a9e3-653f045e998c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc65418fbc0>]}
+[0m13:14:30.621174 [debug] [Thread-1 (]: Began running node model.dbt_datavault.link_customer_country
+[0m13:14:30.622013 [info ] [Thread-4 (]: 3 of 8 OK created sql incremental model raw_vault.hub_country .................. [[32mINSERT (0 rows)[0m in 0.90s]
+[0m13:14:30.622728 [debug] [Thread-2 (]: Finished running node model.dbt_datavault.hub_customer
+[0m13:14:30.623684 [info ] [Thread-3 (]: 2 of 8 OK created sql incremental model raw_vault.hub_category ................. [[32mINSERT (0 rows)[0m in 0.91s]
+[0m13:14:30.624472 [info ] [Thread-1 (]: 6 of 8 START sql incremental model raw_vault.link_customer_country ............. [RUN]
+[0m13:14:30.625248 [debug] [Thread-4 (]: Finished running node model.dbt_datavault.hub_country
+[0m13:14:30.625854 [debug] [Thread-2 (]: Began running node model.dbt_datavault.sat_customer_details
+[0m13:14:30.626503 [debug] [Thread-3 (]: Finished running node model.dbt_datavault.hub_category
+[0m13:14:30.627096 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_datavault.link_customer_category, now model.dbt_datavault.link_customer_country)
+[0m13:14:30.627773 [debug] [Thread-4 (]: Began running node model.dbt_datavault.sat_customer_metrics
+[0m13:14:30.628337 [info ] [Thread-2 (]: 7 of 8 START sql incremental model raw_vault.sat_customer_details .............. [RUN]
+[0m13:14:30.629246 [debug] [Thread-1 (]: Began compiling node model.dbt_datavault.link_customer_country
+[0m13:14:30.629896 [info ] [Thread-4 (]: 8 of 8 START sql incremental model raw_vault.sat_customer_metrics .............. [RUN]
+[0m13:14:30.630432 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.dbt_datavault.hub_customer, now model.dbt_datavault.sat_customer_details)
+[0m13:14:30.634876 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_datavault.link_customer_country"
+[0m13:14:30.635528 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.dbt_datavault.hub_country, now model.dbt_datavault.sat_customer_metrics)
+[0m13:14:30.636035 [debug] [Thread-2 (]: Began compiling node model.dbt_datavault.sat_customer_details
+[0m13:14:30.636754 [debug] [Thread-4 (]: Began compiling node model.dbt_datavault.sat_customer_metrics
+[0m13:14:30.643180 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_datavault.sat_customer_details"
+[0m13:14:30.648089 [debug] [Thread-4 (]: Writing injected SQL for node "model.dbt_datavault.sat_customer_metrics"
+[0m13:14:30.649641 [debug] [Thread-1 (]: Began executing node model.dbt_datavault.link_customer_country
+[0m13:14:30.655049 [debug] [Thread-1 (]: Using trino connection "model.dbt_datavault.link_customer_country"
+[0m13:14:30.655668 [debug] [Thread-1 (]: On model.dbt_datavault.link_customer_country: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.link_customer_country"} */
+
+  create or replace view
+    "hive"."raw_vault"."link_customer_country__dbt_tmp"
+  security definer
+  as
+    -- depends_on: "hive"."raw_vault"."stg_customers"
+
+
+
+with staged as (
+    select distinct
+        hk_customer_country,
+        hk_customer,
+        hk_country,
+        load_datetime,
+        record_source
+    from "hive"."raw_vault"."stg_customers"
+)
+
+select * from staged
+
+
+where hk_customer_country not in (select hk_customer_country from "hive"."raw_vault"."link_customer_country")
+
+  
+[0m13:14:30.656358 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:14:30.657941 [debug] [Thread-2 (]: Began executing node model.dbt_datavault.sat_customer_details
+[0m13:14:30.658291 [debug] [Thread-4 (]: Began executing node model.dbt_datavault.sat_customer_metrics
+[0m13:14:30.664440 [debug] [Thread-2 (]: Using trino connection "model.dbt_datavault.sat_customer_details"
+[0m13:14:30.670462 [debug] [Thread-4 (]: Using trino connection "model.dbt_datavault.sat_customer_metrics"
+[0m13:14:30.671250 [debug] [Thread-2 (]: On model.dbt_datavault.sat_customer_details: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.sat_customer_details"} */
+
+  create or replace view
+    "hive"."raw_vault"."sat_customer_details__dbt_tmp"
+  security definer
+  as
+    -- depends_on: "hive"."raw_vault"."stg_customers"
+
+
+
+with staged as (
+    select
+        hk_customer,
+        hd_customer_details,
+        age,
+        gender,
+        income_bracket,
+        loyalty_tier,
+        device_type,
+        preferred_payment_method,
+        newsletter_subscribed,
+        referral_source,
+        load_datetime,
+        record_source
+    from "hive"."raw_vault"."stg_customers"
+)
+
+select * from staged s
+
+
+where not exists (
+    select 1 from "hive"."raw_vault"."sat_customer_details" t
+    where t.hk_customer = s.hk_customer
+      and t.hd_customer_details = s.hd_customer_details
+)
+
+  
+[0m13:14:30.672215 [debug] [Thread-4 (]: On model.dbt_datavault.sat_customer_metrics: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.sat_customer_metrics"} */
+
+  create or replace view
+    "hive"."raw_vault"."sat_customer_metrics__dbt_tmp"
+  security definer
+  as
+    -- depends_on: "hive"."raw_vault"."stg_customers"
+
+
+
+with staged as (
+    select
+        hk_customer,
+        hd_customer_metrics,
+        total_orders,
+        total_spent_usd,
+        avg_order_value_usd,
+        discount_usage_rate,
+        return_rate,
+        satisfaction_score,
+        customer_lifetime_days,
+        days_since_last_purchase,
+        avg_session_duration_min,
+        avg_pages_per_session,
+        churn,
+        load_datetime,
+        record_source
+    from "hive"."raw_vault"."stg_customers"
+)
+
+select * from staged s
+
+
+where not exists (
+    select 1 from "hive"."raw_vault"."sat_customer_metrics" t
+    where t.hk_customer = s.hk_customer
+      and t.hd_customer_metrics = s.hd_customer_metrics
+)
+
+  
+[0m13:14:30.673688 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m13:14:30.674290 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m13:14:30.731244 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.075 seconds
+[0m13:14:30.735516 [debug] [Thread-1 (]: Using trino connection "model.dbt_datavault.link_customer_country"
+[0m13:14:30.736111 [debug] [Thread-1 (]: On model.dbt_datavault.link_customer_country: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.link_customer_country"} */
+
+    select column_name, data_type
+    from "hive".INFORMATION_SCHEMA.columns
+    where
+      table_catalog = 'hive'
+      and table_schema = 'raw_vault'
+      and table_name = 'link_customer_country__dbt_tmp'
+[0m13:14:30.738158 [debug] [Thread-4 (]: SQL status: CREATE VIEW in 0.064 seconds
+[0m13:14:30.742434 [debug] [Thread-4 (]: Using trino connection "model.dbt_datavault.sat_customer_metrics"
+[0m13:14:30.743773 [debug] [Thread-4 (]: On model.dbt_datavault.sat_customer_metrics: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.sat_customer_metrics"} */
+
+    select column_name, data_type
+    from "hive".INFORMATION_SCHEMA.columns
+    where
+      table_catalog = 'hive'
+      and table_schema = 'raw_vault'
+      and table_name = 'sat_customer_metrics__dbt_tmp'
+[0m13:14:30.744558 [debug] [Thread-2 (]: SQL status: CREATE VIEW in 0.071 seconds
+[0m13:14:30.749911 [debug] [Thread-2 (]: Using trino connection "model.dbt_datavault.sat_customer_details"
+[0m13:14:30.751258 [debug] [Thread-2 (]: On model.dbt_datavault.sat_customer_details: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.sat_customer_details"} */
+
+    select column_name, data_type
+    from "hive".INFORMATION_SCHEMA.columns
+    where
+      table_catalog = 'hive'
+      and table_schema = 'raw_vault'
+      and table_name = 'sat_customer_details__dbt_tmp'
+[0m13:14:30.774903 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.038 seconds
+[0m13:14:30.782239 [debug] [Thread-1 (]: Using trino connection "model.dbt_datavault.link_customer_country"
+[0m13:14:30.783182 [debug] [Thread-1 (]: On model.dbt_datavault.link_customer_country: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.link_customer_country"} */
+
+    select column_name, data_type
+    from "hive".INFORMATION_SCHEMA.columns
+    where
+      table_catalog = 'hive'
+      and table_schema = 'raw_vault'
+      and table_name = 'link_customer_country'
+[0m13:14:30.788047 [debug] [Thread-4 (]: SQL status: SUCCESS in 0.043 seconds
+[0m13:14:30.792998 [debug] [Thread-4 (]: Using trino connection "model.dbt_datavault.sat_customer_metrics"
+[0m13:14:30.793916 [debug] [Thread-2 (]: SQL status: SUCCESS in 0.041 seconds
+[0m13:14:30.794693 [debug] [Thread-4 (]: On model.dbt_datavault.sat_customer_metrics: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.sat_customer_metrics"} */
+
+    select column_name, data_type
+    from "hive".INFORMATION_SCHEMA.columns
+    where
+      table_catalog = 'hive'
+      and table_schema = 'raw_vault'
+      and table_name = 'sat_customer_metrics'
+[0m13:14:30.800954 [debug] [Thread-2 (]: Using trino connection "model.dbt_datavault.sat_customer_details"
+[0m13:14:30.803920 [debug] [Thread-2 (]: On model.dbt_datavault.sat_customer_details: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.sat_customer_details"} */
+
+    select column_name, data_type
+    from "hive".INFORMATION_SCHEMA.columns
+    where
+      table_catalog = 'hive'
+      and table_schema = 'raw_vault'
+      and table_name = 'sat_customer_details'
+[0m13:14:30.820965 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.037 seconds
+[0m13:14:30.826045 [debug] [Thread-1 (]: Using trino connection "model.dbt_datavault.link_customer_country"
+[0m13:14:30.826612 [debug] [Thread-1 (]: On model.dbt_datavault.link_customer_country: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.link_customer_country"} */
+
+    select column_name, data_type
+    from "hive".INFORMATION_SCHEMA.columns
+    where
+      table_catalog = 'hive'
+      and table_schema = 'raw_vault'
+      and table_name = 'link_customer_country'
+[0m13:14:30.838728 [debug] [Thread-4 (]: SQL status: SUCCESS in 0.036 seconds
+[0m13:14:30.839781 [debug] [Thread-2 (]: SQL status: SUCCESS in 0.035 seconds
+[0m13:14:30.846193 [debug] [Thread-4 (]: Using trino connection "model.dbt_datavault.sat_customer_metrics"
+[0m13:14:30.850718 [debug] [Thread-2 (]: Using trino connection "model.dbt_datavault.sat_customer_details"
+[0m13:14:30.851690 [debug] [Thread-4 (]: On model.dbt_datavault.sat_customer_metrics: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.sat_customer_metrics"} */
+
+    select column_name, data_type
+    from "hive".INFORMATION_SCHEMA.columns
+    where
+      table_catalog = 'hive'
+      and table_schema = 'raw_vault'
+      and table_name = 'sat_customer_metrics'
+[0m13:14:30.852242 [debug] [Thread-2 (]: On model.dbt_datavault.sat_customer_details: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.sat_customer_details"} */
+
+    select column_name, data_type
+    from "hive".INFORMATION_SCHEMA.columns
+    where
+      table_catalog = 'hive'
+      and table_schema = 'raw_vault'
+      and table_name = 'sat_customer_details'
+[0m13:14:30.861302 [debug] [Thread-1 (]: SQL status: SUCCESS in 0.034 seconds
+[0m13:14:30.863916 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_datavault.link_customer_country"
+[0m13:14:30.873714 [debug] [Thread-1 (]: Using trino connection "model.dbt_datavault.link_customer_country"
+[0m13:14:30.874209 [debug] [Thread-1 (]: On model.dbt_datavault.link_customer_country: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.link_customer_country"} */
+insert into "hive"."raw_vault"."link_customer_country" ("hk_customer_country", "hk_customer", "hk_country", "load_datetime", "record_source")
+    (
+        select "hk_customer_country", "hk_customer", "hk_country", "load_datetime", "record_source"
+        from "hive"."raw_vault"."link_customer_country__dbt_tmp"
+    )
+[0m13:14:30.884449 [debug] [Thread-4 (]: SQL status: SUCCESS in 0.032 seconds
+[0m13:14:30.885240 [debug] [Thread-2 (]: SQL status: SUCCESS in 0.031 seconds
+[0m13:14:30.887709 [debug] [Thread-4 (]: Writing runtime sql for node "model.dbt_datavault.sat_customer_metrics"
+[0m13:14:30.890007 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_datavault.sat_customer_details"
+[0m13:14:30.896942 [debug] [Thread-4 (]: Using trino connection "model.dbt_datavault.sat_customer_metrics"
+[0m13:14:30.898524 [debug] [Thread-2 (]: Using trino connection "model.dbt_datavault.sat_customer_details"
+[0m13:14:30.899035 [debug] [Thread-4 (]: On model.dbt_datavault.sat_customer_metrics: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.sat_customer_metrics"} */
+insert into "hive"."raw_vault"."sat_customer_metrics" ("hk_customer", "hd_customer_metrics", "total_orders", "total_spent_usd", "avg_order_value_usd", "discount_usage_rate", "return_rate", "satisfaction_score", "customer_lifetime_days", "days_since_last_purchase", "avg_session_duration_min", "avg_pages_per_session", "churn", "load_datetime", "record_source")
+    (
+        select "hk_customer", "hd_customer_metrics", "total_orders", "total_spent_usd", "avg_order_value_usd", "discount_usage_rate", "return_rate", "satisfaction_score", "customer_lifetime_days", "days_since_last_purchase", "avg_session_duration_min", "avg_pages_per_session", "churn", "load_datetime", "record_source"
+        from "hive"."raw_vault"."sat_customer_metrics__dbt_tmp"
+    )
+[0m13:14:30.899563 [debug] [Thread-2 (]: On model.dbt_datavault.sat_customer_details: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.sat_customer_details"} */
+insert into "hive"."raw_vault"."sat_customer_details" ("hk_customer", "hd_customer_details", "age", "gender", "income_bracket", "loyalty_tier", "device_type", "preferred_payment_method", "newsletter_subscribed", "referral_source", "load_datetime", "record_source")
+    (
+        select "hk_customer", "hd_customer_details", "age", "gender", "income_bracket", "loyalty_tier", "device_type", "preferred_payment_method", "newsletter_subscribed", "referral_source", "load_datetime", "record_source"
+        from "hive"."raw_vault"."sat_customer_details__dbt_tmp"
+    )
+[0m13:14:31.042408 [debug] [Thread-1 (]: SQL status: INSERT (0 rows) in 0.168 seconds
+[0m13:14:31.047958 [debug] [Thread-1 (]: Applying DROP to: "hive"."raw_vault"."link_customer_country__dbt_tmp"
+[0m13:14:31.049313 [debug] [Thread-1 (]: Using trino connection "model.dbt_datavault.link_customer_country"
+[0m13:14:31.049935 [debug] [Thread-1 (]: On model.dbt_datavault.link_customer_country: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.link_customer_country"} */
+
+    drop view if exists "hive"."raw_vault"."link_customer_country__dbt_tmp"
+[0m13:14:31.109479 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.059 seconds
+[0m13:14:31.112200 [debug] [Thread-1 (]: On model.dbt_datavault.link_customer_country: ROLLBACK
+[0m13:14:31.113015 [debug] [Thread-1 (]: On model.dbt_datavault.link_customer_country: Close
+[0m13:14:31.114115 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b122f475-ee33-4429-a9e3-653f045e998c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc654200ce0>]}
+[0m13:14:31.115011 [info ] [Thread-1 (]: 6 of 8 OK created sql incremental model raw_vault.link_customer_country ........ [[32mINSERT (0 rows)[0m in 0.49s]
+[0m13:14:31.115807 [debug] [Thread-1 (]: Finished running node model.dbt_datavault.link_customer_country
+[0m13:14:31.155277 [debug] [Thread-2 (]: SQL status: INSERT (0 rows) in 0.254 seconds
+[0m13:14:31.160107 [debug] [Thread-2 (]: Applying DROP to: "hive"."raw_vault"."sat_customer_details__dbt_tmp"
+[0m13:14:31.162298 [debug] [Thread-2 (]: Using trino connection "model.dbt_datavault.sat_customer_details"
+[0m13:14:31.163041 [debug] [Thread-2 (]: On model.dbt_datavault.sat_customer_details: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.sat_customer_details"} */
+
+    drop view if exists "hive"."raw_vault"."sat_customer_details__dbt_tmp"
+[0m13:14:31.163552 [debug] [Thread-4 (]: SQL status: INSERT (0 rows) in 0.263 seconds
+[0m13:14:31.169364 [debug] [Thread-4 (]: Applying DROP to: "hive"."raw_vault"."sat_customer_metrics__dbt_tmp"
+[0m13:14:31.170437 [debug] [Thread-4 (]: Using trino connection "model.dbt_datavault.sat_customer_metrics"
+[0m13:14:31.171475 [debug] [Thread-4 (]: On model.dbt_datavault.sat_customer_metrics: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_datavault", "target_name": "dev", "node_id": "model.dbt_datavault.sat_customer_metrics"} */
+
+    drop view if exists "hive"."raw_vault"."sat_customer_metrics__dbt_tmp"
+[0m13:14:31.231602 [debug] [Thread-4 (]: SQL status: DROP VIEW in 0.060 seconds
+[0m13:14:31.233747 [debug] [Thread-4 (]: On model.dbt_datavault.sat_customer_metrics: ROLLBACK
+[0m13:14:31.234212 [debug] [Thread-2 (]: SQL status: DROP VIEW in 0.070 seconds
+[0m13:14:31.234533 [debug] [Thread-4 (]: On model.dbt_datavault.sat_customer_metrics: Close
+[0m13:14:31.236104 [debug] [Thread-2 (]: On model.dbt_datavault.sat_customer_details: ROLLBACK
+[0m13:14:31.236820 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b122f475-ee33-4429-a9e3-653f045e998c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc65413dc40>]}
+[0m13:14:31.237144 [debug] [Thread-2 (]: On model.dbt_datavault.sat_customer_details: Close
+[0m13:14:31.237863 [info ] [Thread-4 (]: 8 of 8 OK created sql incremental model raw_vault.sat_customer_metrics ......... [[32mINSERT (0 rows)[0m in 0.60s]
+[0m13:14:31.238573 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b122f475-ee33-4429-a9e3-653f045e998c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc657f090d0>]}
+[0m13:14:31.239016 [debug] [Thread-4 (]: Finished running node model.dbt_datavault.sat_customer_metrics
+[0m13:14:31.239722 [info ] [Thread-2 (]: 7 of 8 OK created sql incremental model raw_vault.sat_customer_details ......... [[32mINSERT (0 rows)[0m in 0.61s]
+[0m13:14:31.240718 [debug] [Thread-2 (]: Finished running node model.dbt_datavault.sat_customer_details
+[0m13:14:31.242830 [debug] [MainThread]: On master: COMMIT
+[0m13:14:31.243438 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:14:31.243825 [debug] [MainThread]: Connection 'model.dbt_datavault.link_customer_country' was properly closed.
+[0m13:14:31.244208 [debug] [MainThread]: Connection 'model.dbt_datavault.hub_category' was properly closed.
+[0m13:14:31.244547 [debug] [MainThread]: Connection 'model.dbt_datavault.sat_customer_metrics' was properly closed.
+[0m13:14:31.244869 [debug] [MainThread]: Connection 'model.dbt_datavault.sat_customer_details' was properly closed.
+[0m13:14:31.245283 [info ] [MainThread]: 
+[0m13:14:31.245760 [info ] [MainThread]: Finished running 7 incremental models, 1 view model in 0 hours 0 minutes and 1.85 seconds (1.85s).
+[0m13:14:31.247182 [debug] [MainThread]: Command end result
+[0m13:14:31.289942 [debug] [MainThread]: Wrote artifact WritableManifest to /workspace/dbt_datavault/target/manifest.json
+[0m13:14:31.294696 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspace/dbt_datavault/target/semantic_manifest.json
+[0m13:14:31.302864 [debug] [MainThread]: Wrote artifact RunExecutionResult to /workspace/dbt_datavault/target/run_results.json
+[0m13:14:31.303283 [info ] [MainThread]: 
+[0m13:14:31.303755 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:14:31.304204 [info ] [MainThread]: 
+[0m13:14:31.304691 [info ] [MainThread]: Done. PASS=8 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=8
+[0m13:14:31.305732 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 2.707135, "process_in_blocks": "0", "process_kernel_time": 0.297282, "process_mem_max_rss": "131496", "process_out_blocks": "0", "process_user_time": 3.76216}
+[0m13:14:31.306305 [debug] [MainThread]: Command `dbt run` succeeded at 13:14:31.306206 after 2.71 seconds
+[0m13:14:31.306769 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc658754140>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc657e87800>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc656ce6060>]}
+[0m13:14:31.307208 [debug] [MainThread]: Flushing usage events
+[0m13:14:32.096629 [debug] [MainThread]: An error was encountered while trying to flush usage events

@@ -1,0 +1,31 @@
+{
+  "title": "Global E-Commerce Customer Analytics 2024",
+  "id": "yourusername/global-ecommerce-customer-analytics-2024",
+  "licenses": [
+    {
+      "name": "CC0-1.0"
+    }
+  ],
+  "keywords": [
+    "ecommerce",
+    "retail",
+    "customer analytics",
+    "churn prediction",
+    "marketing",
+    "classification",
+    "clustering",
+    "beginner",
+    "tabular"
+  ],
+  "collaborators": [],
+  "data": [
+    {
+      "description": "1,200-row customer behaviour dataset with demographics, spend, and engagement signals",
+      "name": "ecommerce_customer_analytics.csv"
+    },
+    {
+      "description": "Column-level data dictionary with dtypes and definitions",
+      "name": "data_dictionary.csv"
+    }
+  ]
+}
